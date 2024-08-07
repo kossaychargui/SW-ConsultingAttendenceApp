@@ -1,0 +1,10 @@
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SW-ConsultingAttendenceApp(FirstTrial).exe.config
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SW-ConsultingAttendenceApp(FirstTrial).exe
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SW-ConsultingAttendenceApp(FirstTrial).pdb
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).csproj.AssemblyReference.cache
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.LoginForm.resources
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.resources
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).csproj.GenerateResource.cache
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).csproj.CoreCompileInputs.cache
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).exe
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).pdb
