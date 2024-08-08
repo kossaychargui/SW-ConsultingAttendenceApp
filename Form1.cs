@@ -28,6 +28,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         private void LoginForm_Load(object sender, EventArgs e)
         {
             pbLogo.Region = GetRoundedImagePictureBox(pbLogo);
+
         }
 
         private void LoginForm_Paint(object sender, PaintEventArgs e)
@@ -45,6 +46,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             e.Graphics.DrawLine(pen, StartPoint, EndPoint);
         }
 
- 
+        private void jMaterialTextbox1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,3 +8,10 @@ C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).csproj.CoreCompileInputs.cache
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).exe
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).pdb
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\JMaterialTextbox.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\JMetroTextBox.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\JTextBox.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\JThinButton.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-Consu.87173F23.Up2Date
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.EmployeeClockingForm.resources
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\FlatButton.dll
