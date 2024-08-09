@@ -15,3 +15,4 @@ C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\JTh
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-Consu.87173F23.Up2Date
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.EmployeeClockingForm.resources
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\FlatButton.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.ManagerForm.resources

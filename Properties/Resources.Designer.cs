@@ -63,6 +63,76 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3d11bcfd9a1d4cfdba84be94a9e700fb {
+            get {
+                object obj = ResourceManager.GetObject("3d11bcfd9a1d4cfdba84be94a9e700fb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CalendarIcons_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("CalendarIcons-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClockIcon {
+            get {
+                object obj = ResourceManager.GetObject("ClockIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EveningIcon {
+            get {
+                object obj = ResourceManager.GetObject("EveningIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fingerprint_Free_Download_PNG {
+            get {
+                object obj = ResourceManager.GetObject("Fingerprint-Free-Download-PNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FingerPrintImage {
+            get {
+                object obj = ResourceManager.GetObject("FingerPrintImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FingerPrintImage2 {
+            get {
+                object obj = ResourceManager.GetObject("FingerPrintImage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImageLogin {
             get {
                 object obj = ResourceManager.GetObject("ImageLogin", resourceCulture);
@@ -76,6 +146,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         internal static System.Drawing.Bitmap MeetingImage2 {
             get {
                 object obj = ResourceManager.GetObject("MeetingImage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MorningIcon {
+            get {
+                object obj = ResourceManager.GetObject("MorningIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

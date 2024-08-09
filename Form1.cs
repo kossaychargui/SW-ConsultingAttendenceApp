@@ -46,9 +46,48 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             e.Graphics.DrawLine(pen, StartPoint, EndPoint);
         }
 
-        private void jMaterialTextbox1_Load(object sender, EventArgs e)
-        {
 
+
+        private void tbUsername_Enter(object sender, EventArgs e)
+        {
+            if(tbUsername.Text == "Username")
+            {
+                tbUsername.Text = "";
+                tbUsername.ForeColor = Color.Black;
+                
+            }
+        }
+
+        private void tbUsername_Leave(object sender, EventArgs e)
+        {
+            if (tbUsername.Text == "")
+            {
+                tbUsername.Text = "Username";
+                tbUsername.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+            {
+                tbPassword.Text = "";
+                tbPassword.ForeColor = Color.Black;
+                tbPassword.PasswordChar = '*';
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+                tbPassword.ForeColor = Color.Silver;
+                tbPassword.PasswordChar = '\0';
+               
+
+            }
         }
     }
 }

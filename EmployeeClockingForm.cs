@@ -20,6 +20,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         private void EmployeeClockingForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            btn2.Enabled = false;
+
+    
+            
             
         }
 
@@ -31,7 +35,14 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void roundedButton1_MouseHover(object sender, EventArgs e)
         {
-            roundedButton1.FlatStyle = FlatStyle.Flat;
+            btn1.FlatStyle = FlatStyle.Flat;
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            lbEntryTime.Text = DateTime.Now.ToString();
+        }
+
+ 
     }
 }

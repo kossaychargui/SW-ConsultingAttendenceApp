@@ -14,9 +14,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles();       
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeClockingForm());
+            Application.Run(new LoginForm());
         }
     }
 }
+//EmployeeClockingForm
