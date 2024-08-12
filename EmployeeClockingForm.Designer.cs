@@ -33,7 +33,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbClock = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
-            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbMorningEntryTime = new System.Windows.Forms.Label();
@@ -51,6 +50,8 @@
             this.lbMorningLeavetime = new System.Windows.Forms.Label();
             this.lbEveningEntryTime = new System.Windows.Forms.Label();
             this.lbEveningLeaveTime = new System.Windows.Forms.Label();
+            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -83,28 +84,6 @@
             this.lbDate.Size = new System.Drawing.Size(79, 37);
             this.lbDate.TabIndex = 1;
             this.lbDate.Text = "Date";
-            // 
-            // btn1
-            // 
-            this.btn1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.BorderColor = System.Drawing.Color.CadetBlue;
-            this.btn1.ButtonColor = System.Drawing.Color.CadetBlue;
-            this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.FlatAppearance.BorderSize = 11;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(704, 362);
-            this.btn1.Name = "btn1";
-            this.btn1.OnHoverBorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.OnHoverButtonColor = System.Drawing.Color.Teal;
-            this.btn1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn1.Size = new System.Drawing.Size(157, 45);
-            this.btn1.TabIndex = 2;
-            this.btn1.Text = "Check In";
-            this.btn1.TextColor = System.Drawing.Color.White;
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
-            this.btn1.MouseHover += new System.EventHandler(this.roundedButton1_MouseHover);
             // 
             // label1
             // 
@@ -281,6 +260,33 @@
             this.lbEveningLeaveTime.TabIndex = 25;
             this.lbEveningLeaveTime.Text = "-";
             // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn1.BorderColor = System.Drawing.Color.CadetBlue;
+            this.btn1.ButtonColor = System.Drawing.Color.CadetBlue;
+            this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn1.FlatAppearance.BorderSize = 11;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Location = new System.Drawing.Point(704, 362);
+            this.btn1.Name = "btn1";
+            this.btn1.OnHoverBorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn1.OnHoverButtonColor = System.Drawing.Color.Teal;
+            this.btn1.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn1.Size = new System.Drawing.Size(157, 45);
+            this.btn1.TabIndex = 2;
+            this.btn1.Text = "Check In";
+            this.btn1.TextColor = System.Drawing.Color.White;
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btn1.MouseHover += new System.EventHandler(this.roundedButton1_MouseHover);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // EmployeeClockingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -347,5 +353,6 @@
         private System.Windows.Forms.Label lbMorningLeavetime;
         private System.Windows.Forms.Label lbEveningEntryTime;
         private System.Windows.Forms.Label lbEveningLeaveTime;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

@@ -28,6 +28,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         private void LoginForm_Load(object sender, EventArgs e)
         {
             pbLogo.Region = GetRoundedImagePictureBox(pbLogo);
+           
 
         }
 
@@ -88,6 +89,18 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                
 
             }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login(tbUsername.Text, tbPassword.Text);
+        }
+
+        public void Login(string Username, string Password)
+        {
+            // get the all the application users: whether was it employees, manager and Admin
+            // if (username == user.username && password == user.password)
+
         }
     }
 }

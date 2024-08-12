@@ -16,8 +16,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         {
             Application.EnableVisualStyles();       
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeClockingForm());
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            Application.Run(loginForm);
         }
     }
 }
 //EmployeeClockingForm
+
+
+// I just want to the login form to start at the center of the screen . The code before was
+// Application.EnableVisualStyles(); // same as now
+// Application.SetCompatibleTextRenderingDefault(false); // same as now
+// Application.Run(new LoginForm()); // that's what did edit
