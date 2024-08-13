@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeClockingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,7 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\clsCurrentUser.cs" />
     <Compile Include="Models\clsDepartment.cs" />
     <Compile Include="Models\clsEmployee.cs" />
     <Compile Include="Models\clsManager.cs" />
@@ -153,6 +160,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ClockIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\ManagerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\EmployeeysInformationCardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\DashboardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DemandeApproveIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surveryIcon2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

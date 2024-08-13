@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\models\\clsdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:models\\clsdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\models\\clsemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:models\\clsemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\employeeclockingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:employeeclockingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\employeeclockingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:employeeclockingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\models\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:models\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,88 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsDepartment.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsDepartment.cs",
-              "RelativeDocumentMoniker": "Models\\clsDepartment.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsDepartment.cs",
-              "RelativeToolTip": "Models\\clsDepartment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T19:36:13.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clsEmployee.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsEmployee.cs",
-              "RelativeDocumentMoniker": "Models\\clsEmployee.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsEmployee.cs",
-              "RelativeToolTip": "Models\\clsEmployee.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Title": "ManagerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
+              "RelativeDocumentMoniker": "ManagerForm.cs",
+              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
+              "RelativeToolTip": "ManagerForm.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T19:22:40.328Z",
+              "WhenOpened": "2024-08-13T11:03:01.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAswB4AAAA8AAAA",
+              "DocumentIndex": 0,
+              "Title": "ManagerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
+              "RelativeDocumentMoniker": "ManagerForm.cs",
+              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs [Design]",
+              "RelativeToolTip": "ManagerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:33:37.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeClockingForm.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\EmployeeClockingForm.cs",
-              "RelativeDocumentMoniker": "EmployeeClockingForm.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\EmployeeClockingForm.cs",
-              "RelativeToolTip": "EmployeeClockingForm.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAAB8AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:31:27.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeClockingForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\EmployeeClockingForm.cs",
-              "RelativeDocumentMoniker": "EmployeeClockingForm.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\EmployeeClockingForm.cs [Design]",
-              "RelativeToolTip": "EmployeeClockingForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:28:25.863Z"
+              "WhenOpened": "2024-08-13T11:02:15.257Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAAAGIAAAA7AAAA",
+              "Title": "clsUser.cs",
+              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsUser.cs",
+              "RelativeDocumentMoniker": "Models\\clsUser.cs",
+              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsUser.cs",
+              "RelativeToolTip": "Models\\clsUser.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAtwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T18:02:30.196Z",
+              "WhenOpened": "2024-08-13T08:44:18.096Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T13:38:05.383Z"
             }
           ]
         }

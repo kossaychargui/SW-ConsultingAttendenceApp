@@ -14,11 +14,11 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();       
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
-            Application.Run(loginForm);
+            Application.Run(new ManagerForm());
         }
     }
 }

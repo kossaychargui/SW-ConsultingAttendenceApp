@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_
 {
@@ -34,17 +36,17 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void LoginForm_Paint(object sender, PaintEventArgs e)
         {
-            Color gray = Color.Gray;
-            Pen pen = new Pen(gray);
-            pen.Width = 2;
-            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+            //Color gray = Color.Gray;
+            //Pen pen = new Pen(gray);
+            //pen.Width = 2;
+            //pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            //pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
+            
+            //Point StartPoint = new Point(420, 30);
+            //Point EndPoint = new Point(420, 330);
 
-            Point StartPoint = new Point(420, 30);
-            Point EndPoint = new Point(420, 330);
-
-            e.Graphics.DrawLine(pen, StartPoint, EndPoint);
+            //e.Graphics.DrawLine(pen, StartPoint, EndPoint);
         }
 
 
@@ -86,21 +88,49 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 tbPassword.Text = "Password";
                 tbPassword.ForeColor = Color.Silver;
                 tbPassword.PasswordChar = '\0';
-               
-
+        
             }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Login(tbUsername.Text, tbPassword.Text);
+            clsCurrentUser.LoggedInUser = clsUser.Login(tbUsername.Text, tbPassword.Text);
+            if(clsCurrentUser.LoggedInUser != null)
+            {
+                
+                if(clsCurrentUser.LoggedInUser.RoleID == 2)
+                {
+                    EmployeeClockingForm emp = new EmployeeClockingForm();
+                    emp.StartPosition = FormStartPosition.CenterScreen;
+                    emp.Show();
+  
+                }
+                else if (clsCurrentUser.LoggedInUser.RoleID == 1)
+                {
+                    ManagerForm manager = new ManagerForm();
+                    manager.StartPosition = FormStartPosition.CenterScreen;
+                    manager.Show();
+
+                }
+                else
+                {
+                    AdminForm admin = new AdminForm();
+                    admin.StartPosition = FormStartPosition.CenterScreen;
+                    admin.Show();
+          
+                }
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username/Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbPassword.Text = "";
+                tbUsername.Text = "";
+                tbUsername_Leave(sender, e);
+                textBox1_Leave(sender, e);
+            }
         }
 
-        public void Login(string Username, string Password)
-        {
-            // get the all the application users: whether was it employees, manager and Admin
-            // if (username == user.username && password == user.password)
-
-        }
+        
     }
 }

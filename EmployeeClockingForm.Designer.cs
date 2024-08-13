@@ -50,8 +50,8 @@
             this.lbMorningLeavetime = new System.Windows.Forms.Label();
             this.lbEveningEntryTime = new System.Windows.Forms.Label();
             this.lbEveningLeaveTime = new System.Windows.Forms.Label();
-            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,6 +67,7 @@
             // 
             // lbClock
             // 
+            this.lbClock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbClock.AutoSize = true;
             this.lbClock.Font = new System.Drawing.Font("Microsoft PhagsPa", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbClock.Location = new System.Drawing.Point(944, 30);
@@ -160,6 +161,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.ClockIcon;
             this.pictureBox7.Location = new System.Drawing.Point(885, 22);
@@ -260,6 +262,11 @@
             this.lbEveningLeaveTime.TabIndex = 25;
             this.lbEveningLeaveTime.Text = "-";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // btn1
             // 
             this.btn1.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -281,11 +288,6 @@
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             this.btn1.MouseHover += new System.EventHandler(this.roundedButton1_MouseHover);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
             // 
             // EmployeeClockingForm
             // 

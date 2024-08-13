@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
-    internal class clsUser
+    public class clsUser
     {
 
         public int UserID { get; set; }
@@ -14,15 +14,22 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public string Username { get; set }
+        public string Username { get; set; }
         public string Password { get; set; }
 
-        public void Login()
-        {
+        public int RoleID {  get; set; }
+        // 0 for admin 1 for manager and 2 for employees
 
+        public static clsUser Login(string Username, string Password)
+        {
+            clsUser user = new clsUser();
+            user.Username = Username;
+            user.Password = Password;
+            user.RoleID = 2;
+            return user;
         }
 
-        public void Logout()
+        public static void Logout()
         {
 
         }

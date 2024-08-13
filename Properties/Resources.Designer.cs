@@ -93,6 +93,46 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard2 {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DashboardIcon {
+            get {
+                object obj = ResourceManager.GetObject("DashboardIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DemandeApproveIcon {
+            get {
+                object obj = ResourceManager.GetObject("DemandeApproveIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EmployeeysInformationCardIcon {
+            get {
+                object obj = ResourceManager.GetObject("EmployeeysInformationCardIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EveningIcon {
             get {
                 object obj = ResourceManager.GetObject("EveningIcon", resourceCulture);
@@ -143,6 +183,26 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ManagerIcon {
+            get {
+                object obj = ResourceManager.GetObject("ManagerIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ManagerIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("ManagerIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MeetingImage2 {
             get {
                 object obj = ResourceManager.GetObject("MeetingImage2", resourceCulture);
@@ -156,6 +216,26 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         internal static System.Drawing.Bitmap MorningIcon {
             get {
                 object obj = ResourceManager.GetObject("MorningIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reportIcon {
+            get {
+                object obj = ResourceManager.GetObject("reportIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap surveryIcon2 {
+            get {
+                object obj = ResourceManager.GetObject("surveryIcon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
