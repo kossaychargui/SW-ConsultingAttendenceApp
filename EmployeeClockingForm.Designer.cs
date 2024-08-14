@@ -40,6 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbMorningLeavetime = new System.Windows.Forms.Label();
+            this.lbEveningEntryTime = new System.Windows.Forms.Label();
+            this.lbEveningLeaveTime = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -47,11 +53,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbMorningLeavetime = new System.Windows.Forms.Label();
-            this.lbEveningEntryTime = new System.Windows.Forms.Label();
-            this.lbEveningLeaveTime = new System.Windows.Forms.Label();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btn1 = new SW_ConsultingAttendenceApp_FirstTrial_.RoundedButton();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -159,6 +162,72 @@
             this.label6.TabIndex = 20;
             this.label6.Text = " Leave Time :";
             // 
+            // lbMorningLeavetime
+            // 
+            this.lbMorningLeavetime.AutoSize = true;
+            this.lbMorningLeavetime.Location = new System.Drawing.Point(113, 253);
+            this.lbMorningLeavetime.Name = "lbMorningLeavetime";
+            this.lbMorningLeavetime.Size = new System.Drawing.Size(13, 17);
+            this.lbMorningLeavetime.TabIndex = 23;
+            this.lbMorningLeavetime.Text = "-";
+            // 
+            // lbEveningEntryTime
+            // 
+            this.lbEveningEntryTime.AutoSize = true;
+            this.lbEveningEntryTime.Location = new System.Drawing.Point(113, 368);
+            this.lbEveningEntryTime.Name = "lbEveningEntryTime";
+            this.lbEveningEntryTime.Size = new System.Drawing.Size(13, 17);
+            this.lbEveningEntryTime.TabIndex = 24;
+            this.lbEveningEntryTime.Text = "-";
+            // 
+            // lbEveningLeaveTime
+            // 
+            this.lbEveningLeaveTime.AutoSize = true;
+            this.lbEveningLeaveTime.Location = new System.Drawing.Point(113, 421);
+            this.lbEveningLeaveTime.Name = "lbEveningLeaveTime";
+            this.lbEveningLeaveTime.Size = new System.Drawing.Size(13, 17);
+            this.lbEveningLeaveTime.TabIndex = 25;
+            this.lbEveningLeaveTime.Text = "-";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btn1.BorderColor = System.Drawing.Color.CadetBlue;
+            this.btn1.ButtonColor = System.Drawing.Color.CadetBlue;
+            this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn1.FlatAppearance.BorderSize = 11;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Location = new System.Drawing.Point(702, 361);
+            this.btn1.Name = "btn1";
+            this.btn1.OnHoverBorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn1.OnHoverButtonColor = System.Drawing.Color.Teal;
+            this.btn1.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn1.Size = new System.Drawing.Size(157, 45);
+            this.btn1.TabIndex = 2;
+            this.btn1.Text = "Check In";
+            this.btn1.TextColor = System.Drawing.Color.White;
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btn1.MouseHover += new System.EventHandler(this.roundedButton1_MouseHover);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.LogoutIcon_removebg_preview;
+            this.pictureBox8.Location = new System.Drawing.Point(1007, 479);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 26;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -235,59 +304,17 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // lbMorningLeavetime
+            // label7
             // 
-            this.lbMorningLeavetime.AutoSize = true;
-            this.lbMorningLeavetime.Location = new System.Drawing.Point(113, 253);
-            this.lbMorningLeavetime.Name = "lbMorningLeavetime";
-            this.lbMorningLeavetime.Size = new System.Drawing.Size(13, 17);
-            this.lbMorningLeavetime.TabIndex = 23;
-            this.lbMorningLeavetime.Text = "-";
-            // 
-            // lbEveningEntryTime
-            // 
-            this.lbEveningEntryTime.AutoSize = true;
-            this.lbEveningEntryTime.Location = new System.Drawing.Point(113, 368);
-            this.lbEveningEntryTime.Name = "lbEveningEntryTime";
-            this.lbEveningEntryTime.Size = new System.Drawing.Size(13, 17);
-            this.lbEveningEntryTime.TabIndex = 24;
-            this.lbEveningEntryTime.Text = "-";
-            // 
-            // lbEveningLeaveTime
-            // 
-            this.lbEveningLeaveTime.AutoSize = true;
-            this.lbEveningLeaveTime.Location = new System.Drawing.Point(113, 421);
-            this.lbEveningLeaveTime.Name = "lbEveningLeaveTime";
-            this.lbEveningLeaveTime.Size = new System.Drawing.Size(13, 17);
-            this.lbEveningLeaveTime.TabIndex = 25;
-            this.lbEveningLeaveTime.Text = "-";
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
-            // btn1
-            // 
-            this.btn1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.BorderColor = System.Drawing.Color.CadetBlue;
-            this.btn1.ButtonColor = System.Drawing.Color.CadetBlue;
-            this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.FlatAppearance.BorderSize = 11;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(704, 362);
-            this.btn1.Name = "btn1";
-            this.btn1.OnHoverBorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn1.OnHoverButtonColor = System.Drawing.Color.Teal;
-            this.btn1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn1.Size = new System.Drawing.Size(157, 45);
-            this.btn1.TabIndex = 2;
-            this.btn1.Text = "Check In";
-            this.btn1.TextColor = System.Drawing.Color.White;
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
-            this.btn1.MouseHover += new System.EventHandler(this.roundedButton1_MouseHover);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label7.Location = new System.Drawing.Point(1003, 538);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 23);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Logout";
             // 
             // EmployeeClockingForm
             // 
@@ -295,6 +322,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1100, 570);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.lbEveningLeaveTime);
             this.Controls.Add(this.lbEveningEntryTime);
             this.Controls.Add(this.lbMorningLeavetime);
@@ -320,6 +349,7 @@
             this.Name = "EmployeeClockingForm";
             this.Text = "EmployeeClockingForm";
             this.Load += new System.EventHandler(this.EmployeeClockingForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -356,5 +386,7 @@
         private System.Windows.Forms.Label lbEveningEntryTime;
         private System.Windows.Forms.Label lbEveningLeaveTime;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label7;
     }
 }

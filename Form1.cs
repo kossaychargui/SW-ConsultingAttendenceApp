@@ -49,8 +49,6 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             //e.Graphics.DrawLine(pen, StartPoint, EndPoint);
         }
 
-
-
         private void tbUsername_Enter(object sender, EventArgs e)
         {
             if(tbUsername.Text == "Username")
@@ -100,13 +98,21 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 
                 if(clsCurrentUser.LoggedInUser.RoleID == 2)
                 {
+                    tbPassword.Text = "";
+                    tbUsername.Text = "";
+                    tbUsername_Leave(sender, e);
+                    textBox1_Leave(sender, e);
                     EmployeeClockingForm emp = new EmployeeClockingForm();
                     emp.StartPosition = FormStartPosition.CenterScreen;
                     emp.Show();
-  
+                    
                 }
                 else if (clsCurrentUser.LoggedInUser.RoleID == 1)
                 {
+                    tbPassword.Text = "";
+                    tbUsername.Text = "";
+                    tbUsername_Leave(sender, e);
+                    textBox1_Leave(sender, e);
                     ManagerForm manager = new ManagerForm();
                     manager.StartPosition = FormStartPosition.CenterScreen;
                     manager.Show();
@@ -114,12 +120,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 }
                 else
                 {
+                    tbPassword.Text = "";
+                    tbUsername.Text = "";
+                    tbUsername_Leave(sender, e);
+                    textBox1_Leave(sender, e);
                     AdminForm admin = new AdminForm();
                     admin.StartPosition = FormStartPosition.CenterScreen;
                     admin.Show();
           
                 }
-                this.Hide();
+              
             }
             else
             {
@@ -130,6 +140,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 textBox1_Leave(sender, e);
             }
         }
+        
+
+
 
         
     }

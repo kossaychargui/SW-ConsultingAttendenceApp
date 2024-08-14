@@ -23,6 +23,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
     }
 }
 //EmployeeClockingForm
+//new ManagerForm()
 
 
 // I just want to the login form to start at the center of the screen . The code before was

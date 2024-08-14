@@ -29,9 +29,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             return user;
         }
 
-        public static void Logout()
+        public void Logout()
         {
-
+            
         }
         public void ResetPassword()
         {

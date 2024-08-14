@@ -17,25 +17,6 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             InitializeComponent();
         }
 
-        private void ManagerForm_Load(object sender, EventArgs e)
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                  if(ctrl is MdiClient)
-                {
-                    ctrl.BackColor = Color.PaleTurquoise;
-                }
-            }
-        }
-
-        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
     }
 }

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -11,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\models\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:models\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|c:\\users\\media\\source\\repos\\sw-consultingattendenceapp(firsttrial)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2AEFCA-20C2-478B-88D6-22032DF3BC94}|SW-ConsultingAttendenceApp(FirstTrial).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ManagerDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerDashboard.cs",
+              "RelativeDocumentMoniker": "ManagerDashboard.cs",
+              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerDashboard.cs [Design]",
+              "RelativeToolTip": "ManagerDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:54:09.054Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ManagerForm.cs",
               "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
               "RelativeDocumentMoniker": "ManagerForm.cs",
               "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
               "RelativeToolTip": "ManagerForm.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAArwBMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:03:01.567Z",
+              "WhenOpened": "2024-08-14T11:02:34.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ManagerForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs",
               "RelativeDocumentMoniker": "ManagerForm.cs",
               "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\ManagerForm.cs [Design]",
               "RelativeToolTip": "ManagerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:02:15.257Z",
+              "WhenOpened": "2024-08-14T10:57:28.975Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsUser.cs",
-              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsUser.cs",
-              "RelativeDocumentMoniker": "Models\\clsUser.cs",
-              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Models\\clsUser.cs",
-              "RelativeToolTip": "Models\\clsUser.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAtwBUAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Media\\source\\repos\\SW-ConsultingAttendenceApp(FirstTrial)\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:44:18.096Z",
+              "WhenOpened": "2024-08-14T09:04:49.678Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_
 {
@@ -99,6 +101,11 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 await Task.Delay(3000);
                 this.Close();
             }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            clsCurrentUser.LoggedInUser.Logout();
         }
     }
 }

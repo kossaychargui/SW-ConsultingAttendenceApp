@@ -173,9 +173,59 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_dashboard_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-dashboard-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_demand_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-demand-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reports_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reports-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImageLogin {
             get {
                 object obj = ResourceManager.GetObject("ImageLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoutIcon {
+            get {
+                object obj = ResourceManager.GetObject("LogoutIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoutIcon_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("LogoutIcon-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +246,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         internal static System.Drawing.Bitmap ManagerIcon1 {
             get {
                 object obj = ResourceManager.GetObject("ManagerIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap managerSpaceIcon {
+            get {
+                object obj = ResourceManager.GetObject("managerSpaceIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +286,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         internal static System.Drawing.Bitmap reportIcon {
             get {
                 object obj = ResourceManager.GetObject("reportIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reportsIcon_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("reportsIcon-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
