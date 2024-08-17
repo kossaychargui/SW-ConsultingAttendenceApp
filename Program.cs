@@ -18,7 +18,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             Application.SetCompatibleTextRenderingDefault(false);
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
-            Application.Run(new ManagerForm());
+            Application.Run(loginForm);
         }
     }
 }

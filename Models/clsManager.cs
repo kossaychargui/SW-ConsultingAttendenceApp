@@ -15,7 +15,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 
         public void ApproveCheckInRequest(clsEmployee employee)
         {
-            employee.CheckInApproved = true;
+            employee.CheckInRequest = true;
         }
         public void GenerateReport()
         {

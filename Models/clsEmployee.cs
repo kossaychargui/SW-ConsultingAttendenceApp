@@ -16,7 +16,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 
         public clsDepartment department { get; set; }
 
-        public bool CheckInApproved = false;
+        public bool CheckInRequest = false;
 
         public void MorningCheckIn()
         {

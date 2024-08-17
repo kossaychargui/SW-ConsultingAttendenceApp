@@ -36,12 +36,6 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.Charts.WinForms, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
@@ -280,34 +274,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeClockingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeClockingForm.Designer.cs">
-      <DependentUpon>EmployeeClockingForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManagerDashboard.cs">
+    <Compile Include="UserControls\AddEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManagerDashboard.Designer.cs">
-      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    <Compile Include="UserControls\AddEmployeeUserControl.Designer.cs">
+      <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerForm.cs">
+    <Compile Include="UserControls\DemandsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DemandsUserControl.Designer.cs">
+      <DependentUpon>DemandsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeClockingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerForm.Designer.cs">
+    <Compile Include="Forms\EmployeeClockingForm.Designer.cs">
+      <DependentUpon>EmployeeClockingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManagerDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\clsCurrentUser.cs" />
@@ -317,22 +323,34 @@
     <Compile Include="Models\clsUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ReportsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReportsUserControl.Designer.cs">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeClockingForm.resx">
+    <EmbeddedResource Include="UserControls\AddEmployeeUserControl.resx">
+      <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DemandsUserControl.resx">
+      <DependentUpon>DemandsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeClockingForm.resx">
       <DependentUpon>EmployeeClockingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerDashboard.resx">
+    <EmbeddedResource Include="UserControls\ManagerDashboard.resx">
       <DependentUpon>ManagerDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerForm.resx">
+    <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -345,6 +363,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ReportsUserControl.resx">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -433,6 +454,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ManagerForm\Reports\icons8-reports-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employee-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employees-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employees-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employees-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employee-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\icons8-employees-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\2473724-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagerForm\Dashboard\ams-image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-add-administrator-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
@@ -10,8 +11,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
     {
 
         public int UserID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FullName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Username { get; set; }
@@ -25,13 +25,28 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             clsUser user = new clsUser();
             user.Username = Username;
             user.Password = Password;
-            user.RoleID = 2;
+            user.RoleID = 0;
+            user.FullName= "Kossay";
+            
             return user;
         }
 
         public void Logout()
         {
-            
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
+            {
+
+                LoginForm loginForm = new LoginForm();
+                loginForm.StartPosition = FormStartPosition.CenterScreen;
+                loginForm.Show();
+            }
+
+            //DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (check == DialogResult.Yes)
+            //{
+            //    Application.Restart();
+            //}
         }
         public void ResetPassword()
         {
