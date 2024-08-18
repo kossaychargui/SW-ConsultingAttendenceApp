@@ -25,7 +25,12 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             clsUser user = new clsUser();
             user.Username = Username;
             user.Password = Password;
-            user.RoleID = 0;
+            if (Username == "Admin")
+                user.RoleID = 0;
+            else if(Username == "Manager")
+                user.RoleID = 1;
+            else
+                user.RoleID = 2;
             user.FullName= "Kossay";
             
             return user;
@@ -37,9 +42,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             if (check == DialogResult.Yes)
             {
 
-                LoginForm loginForm = new LoginForm();
-                loginForm.StartPosition = FormStartPosition.CenterScreen;
-                loginForm.Show();
+                Application.Restart();
             }
 
             //DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

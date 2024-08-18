@@ -133,6 +133,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     admin.Show();
                     admin.FormClosed += (s, args) => this.Close();
                 }
+                this.Hide();
             
                 
             }

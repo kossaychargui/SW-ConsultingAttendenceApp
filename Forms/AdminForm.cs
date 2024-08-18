@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,20 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             InitializeComponent();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+
+
+       
+
+   
+
+   
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            btnDashboard_Click_1(sender, e);
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
         {
             managerDashboard1.Visible = true;
             managerDashboard1.Dock = DockStyle.Right;
@@ -29,7 +43,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             addEmployeeUserControl1.Dock = DockStyle.None;
         }
 
-        private void btnDemands_Click(object sender, EventArgs e)
+        private void btnDemands_Click_1(object sender, EventArgs e)
         {
             managerDashboard1.Visible = false;
             demandsUserControl1.Visible = true;
@@ -42,7 +56,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             demandsUserControl1.Dock = DockStyle.Right;
         }
 
-        private void btnReports_Click(object sender, EventArgs e)
+        private void btnReports_Click_1(object sender, EventArgs e)
         {
             addEmployeeUserControl1.Visible = false;
             managerDashboard1.Visible = false;
@@ -54,7 +68,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             reportsUserControl1.Dock = DockStyle.Right;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             managerDashboard1.Visible = false;
             demandsUserControl1.Visible = false;
@@ -66,9 +80,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             addEmployeeUserControl1.Dock = DockStyle.Right;
         }
 
-        private void AdminForm_Load(object sender, EventArgs e)
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
-            btnDashboard_Click(sender, e);
+            clsCurrentUser.LoggedInUser.Logout();
         }
     }
 }

@@ -17,9 +17,41 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            UpdateEmployeeCount();
+        }
 
+        private void UpdateEmployeeCount()
+        {
+            int activeEmployees = GetActiveEmployees();
+            int inactiveEmployees = GetInactiveEmployees();
+
+            lbActiveEmployeesCount.Text = activeEmployees.ToString();
+            lbInactiveEmployees.Text = inactiveEmployees.ToString();
+           
+        }
+
+        private void ManagerDashboard_Load(object sender, EventArgs e)
+        {
+            lbTotalEmployeesCount.Text = Convert.ToString(GetTotalEmployees());
+        }
+
+        private int GetTotalEmployees() 
+        {
+            //Code will be here
+            return 5;
+        }
+        private int GetInactiveEmployees() 
+        {
+            //Code will be here
+            return 3;
+        }
+
+        private int GetActiveEmployees()
+        {
+            //Code will be here
+            return 2;
         }
     }
 }

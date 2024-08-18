@@ -28,50 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbInactiveEmployees = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbActiveEmployeesCount = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbTotalEmployeesCount = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 139);
-            this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.lbInactiveEmployees);
             this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Location = new System.Drawing.Point(764, 3);
+            this.panel5.Location = new System.Drawing.Point(763, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(275, 127);
             this.panel5.TabIndex = 2;
@@ -86,15 +72,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Inactive Employees";
             // 
-            // label5
+            // lbInactiveEmployees
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(224, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 29);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "0";
+            this.lbInactiveEmployees.AutoSize = true;
+            this.lbInactiveEmployees.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.lbInactiveEmployees.Location = new System.Drawing.Point(224, 23);
+            this.lbInactiveEmployees.Name = "lbInactiveEmployees";
+            this.lbInactiveEmployees.Size = new System.Drawing.Size(26, 29);
+            this.lbInactiveEmployees.TabIndex = 1;
+            this.lbInactiveEmployees.Text = "0";
             // 
             // pictureBox2
             // 
@@ -109,9 +95,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lbActiveEmployeesCount);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(389, 3);
+            this.panel4.Location = new System.Drawing.Point(383, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 127);
             this.panel4.TabIndex = 2;
@@ -126,15 +112,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Active Employees";
             // 
-            // label6
+            // lbActiveEmployeesCount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label6.Location = new System.Drawing.Point(225, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 29);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "0";
+            this.lbActiveEmployeesCount.AutoSize = true;
+            this.lbActiveEmployeesCount.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.lbActiveEmployeesCount.Location = new System.Drawing.Point(225, 23);
+            this.lbActiveEmployeesCount.Name = "lbActiveEmployeesCount";
+            this.lbActiveEmployeesCount.Size = new System.Drawing.Size(26, 29);
+            this.lbActiveEmployeesCount.TabIndex = 2;
+            this.lbActiveEmployeesCount.Text = "0";
             // 
             // pictureBox3
             // 
@@ -150,7 +136,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lbTotalEmployeesCount);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -167,15 +153,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Employees";
             // 
-            // label4
+            // lbTotalEmployeesCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(215, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "0";
+            this.lbTotalEmployeesCount.AutoSize = true;
+            this.lbTotalEmployeesCount.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.lbTotalEmployeesCount.Location = new System.Drawing.Point(215, 23);
+            this.lbTotalEmployeesCount.Name = "lbTotalEmployeesCount";
+            this.lbTotalEmployeesCount.Size = new System.Drawing.Size(26, 29);
+            this.lbTotalEmployeesCount.TabIndex = 0;
+            this.lbTotalEmployeesCount.Text = "0";
             // 
             // pictureBox1
             // 
@@ -186,39 +172,36 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 145);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1042, 318);
-            this.panel3.TabIndex = 1;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox4.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.ams_image_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 145);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(1042, 318);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Name = "ManagerDashboard";
             this.Size = new System.Drawing.Size(1042, 463);
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.ManagerDashboard_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -228,28 +211,25 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbActiveEmployeesCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTotalEmployeesCount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbInactiveEmployees;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

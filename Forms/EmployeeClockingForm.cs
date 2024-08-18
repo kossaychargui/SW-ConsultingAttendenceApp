@@ -48,7 +48,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         {
             timer1.Start();
             checkInState = CheckInState.EmployeeArrived;
-            LoginForm.ActiveForm.Hide();
+           
            
         }
 
@@ -109,9 +109,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-           
+            
             clsCurrentUser.LoggedInUser.Logout();
-            this.Hide();
+           
         }
     }
 }

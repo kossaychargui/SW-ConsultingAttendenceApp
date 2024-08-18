@@ -479,9 +479,14 @@
   <ItemGroup>
     <None Include="Resources\ManagerForm\Dashboard\ams-image-removebg-preview.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-100.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-add-administrator-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

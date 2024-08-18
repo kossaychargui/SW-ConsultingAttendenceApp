@@ -43,7 +43,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            lbWelcomeUser.Text = "Welcome," + clsCurrentUser.LoggedInUser.Username;
+            lbWelcomeUser.Text = "Welcome,\n" + clsCurrentUser.LoggedInUser.Username;
             managerDashboard1.Visible = true;
             demandsUserControl1.Visible = false;
             reportsUserControl1.Visible = false;
@@ -63,6 +63,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             reportsUserControl1.Dock = DockStyle.Right;
         }
 
-  
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            clsCurrentUser.LoggedInUser.Logout();
+        }
     }
 }

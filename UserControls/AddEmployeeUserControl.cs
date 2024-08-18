@@ -17,6 +17,20 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.UserControls
             InitializeComponent();
         }
 
- 
+        private void ClearAllFields()
+        {
+            tbFirstName.Text = string.Empty;
+            tbLastName.Text = string.Empty;
+            tbEmail.Text = string.Empty;
+            tbPhoneNumber.Text = string.Empty;
+            tbAge.Text = string.Empty;
+            cbDepartment.SelectedIndex = 0;
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearAllFields();
+        }
     }
 }
