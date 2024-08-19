@@ -51,9 +51,6 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             //    Application.Restart();
             //}
         }
-        public void ResetPassword()
-        {
 
-        }
     }
 }

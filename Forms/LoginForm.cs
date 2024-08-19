@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using SW_ConsultingAttendenceApp_FirstTrial_.Forms;
 
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_
@@ -55,8 +56,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             if(tbUsername.Text == "Username")
             {
                 tbUsername.Text = "";
-                tbUsername.ForeColor = Color.Black;
-                
+                tbUsername.ForeColor = Color.Black;   
             }
         }
 
@@ -107,6 +107,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     emp.StartPosition = FormStartPosition.CenterScreen;
                     emp.Show();
                     emp.FormClosed += (s, args) => this.Close();
+                    clsCurrentUser.LoggedInUser = (clsEmployee)clsCurrentUser.LoggedInUser;
 
                 }
                 else if (clsCurrentUser.LoggedInUser.RoleID == 1)
@@ -119,6 +120,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     manager.StartPosition = FormStartPosition.CenterScreen;
                     manager.Show();
                     manager.FormClosed += (s, args) => this.Close();
+                    clsCurrentUser.LoggedInUser = (clsManager)clsCurrentUser.LoggedInUser;
 
 
                 }
@@ -132,6 +134,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     admin.StartPosition = FormStartPosition.CenterScreen;
                     admin.Show();
                     admin.FormClosed += (s, args) => this.Close();
+                    clsCurrentUser.LoggedInUser = (clsAdmin)clsCurrentUser.LoggedInUser;
                 }
                 this.Hide();
             
@@ -150,6 +153,13 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignInForm signInForm = new SignInForm();
+            signInForm.StartPosition = FormStartPosition.CenterScreen;
+            signInForm.Show();
         }
     }
 }

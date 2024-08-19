@@ -8,10 +8,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
     internal class clsManager : clsUser
     {
-        public int ManagerID {  get; set; }
-
         public clsDepartment Department { get; set; }
-
 
         public void ApproveCheckInRequest(clsEmployee employee)
         {

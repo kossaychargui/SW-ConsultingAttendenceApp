@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbWelcomeUser = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnDemands = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -40,10 +44,6 @@
             this.reportsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.ReportsUserControl();
             this.demandsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.DemandsUserControl();
             this.managerDashboard1 = new SW_ConsultingAttendenceApp_FirstTrial_.ManagerDashboard();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lbWelcomeUser);
@@ -69,77 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 616);
             this.panel1.TabIndex = 0;
-            // 
-            // lbWelcomeUser
-            // 
-            this.lbWelcomeUser.AutoSize = true;
-            this.lbWelcomeUser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcomeUser.Location = new System.Drawing.Point(33, 117);
-            this.lbWelcomeUser.Name = "lbWelcomeUser";
-            this.lbWelcomeUser.Size = new System.Drawing.Size(144, 24);
-            this.lbWelcomeUser.TabIndex = 1;
-            this.lbWelcomeUser.Text = "Welcome, User";
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(12, 357);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(210, 50);
-            this.btnReports.TabIndex = 3;
-            this.btnReports.Text = "        Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
-            // btnDemands
-            // 
-            this.btnDemands.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDemands.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDemands.Location = new System.Drawing.Point(12, 284);
-            this.btnDemands.Name = "btnDemands";
-            this.btnDemands.Size = new System.Drawing.Size(210, 50);
-            this.btnDemands.TabIndex = 2;
-            this.btnDemands.Text = "Demands";
-            this.btnDemands.UseVisualStyleBackColor = false;
-            this.btnDemands.Click += new System.EventHandler(this.btnDemands_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Location = new System.Drawing.Point(12, 212);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(210, 50);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "   Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // reportsUserControl1
-            // 
-            this.reportsUserControl1.BackColor = System.Drawing.Color.SkyBlue;
-            this.reportsUserControl1.Location = new System.Drawing.Point(245, 0);
-            this.reportsUserControl1.Name = "reportsUserControl1";
-            this.reportsUserControl1.Size = new System.Drawing.Size(1043, 462);
-            this.reportsUserControl1.TabIndex = 3;
-            // 
-            // demandsUserControl1
-            // 
-            this.demandsUserControl1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.demandsUserControl1.Location = new System.Drawing.Point(233, 3);
-            this.demandsUserControl1.Name = "demandsUserControl1";
-            this.demandsUserControl1.Size = new System.Drawing.Size(1046, 464);
-            this.demandsUserControl1.TabIndex = 2;
-            // 
-            // managerDashboard1
-            // 
-            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
-            this.managerDashboard1.Location = new System.Drawing.Point(233, 0);
-            this.managerDashboard1.Name = "managerDashboard1";
-            this.managerDashboard1.Size = new System.Drawing.Size(1042, 463);
-            this.managerDashboard1.TabIndex = 4;
             // 
             // pictureBox4
             // 
@@ -163,6 +92,16 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
+            // lbWelcomeUser
+            // 
+            this.lbWelcomeUser.AutoSize = true;
+            this.lbWelcomeUser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcomeUser.Location = new System.Drawing.Point(33, 117);
+            this.lbWelcomeUser.Name = "lbWelcomeUser";
+            this.lbWelcomeUser.Size = new System.Drawing.Size(144, 24);
+            this.lbWelcomeUser.TabIndex = 1;
+            this.lbWelcomeUser.Text = "Welcome, User";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SkyBlue;
@@ -183,6 +122,69 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.Location = new System.Drawing.Point(12, 357);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(210, 50);
+            this.btnReports.TabIndex = 3;
+            this.btnReports.Text = "          Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // btnDemands
+            // 
+            this.btnDemands.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDemands.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemands.Location = new System.Drawing.Point(12, 284);
+            this.btnDemands.Name = "btnDemands";
+            this.btnDemands.Size = new System.Drawing.Size(210, 50);
+            this.btnDemands.TabIndex = 2;
+            this.btnDemands.Text = "          Demands";
+            this.btnDemands.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDemands.UseVisualStyleBackColor = false;
+            this.btnDemands.Click += new System.EventHandler(this.btnDemands_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Location = new System.Drawing.Point(12, 212);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(210, 50);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "           Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // reportsUserControl1
+            // 
+            this.reportsUserControl1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.reportsUserControl1.Location = new System.Drawing.Point(245, 0);
+            this.reportsUserControl1.Name = "reportsUserControl1";
+            this.reportsUserControl1.Size = new System.Drawing.Size(1043, 462);
+            this.reportsUserControl1.TabIndex = 3;
+            // 
+            // demandsUserControl1
+            // 
+            this.demandsUserControl1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.demandsUserControl1.Location = new System.Drawing.Point(245, -1);
+            this.demandsUserControl1.Name = "demandsUserControl1";
+            this.demandsUserControl1.Size = new System.Drawing.Size(1046, 464);
+            this.demandsUserControl1.TabIndex = 2;
+            // 
+            // managerDashboard1
+            // 
+            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
+            this.managerDashboard1.Location = new System.Drawing.Point(233, 0);
+            this.managerDashboard1.Name = "managerDashboard1";
+            this.managerDashboard1.Size = new System.Drawing.Size(1042, 463);
+            this.managerDashboard1.TabIndex = 4;
             // 
             // pictureBox8
             // 

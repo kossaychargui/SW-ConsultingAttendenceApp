@@ -280,6 +280,13 @@
     <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clsAdmin.cs" />
     <Compile Include="UserControls\AddEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -334,6 +341,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddEmployeeUserControl.resx">
       <DependentUpon>AddEmployeeUserControl.cs</DependentUpon>

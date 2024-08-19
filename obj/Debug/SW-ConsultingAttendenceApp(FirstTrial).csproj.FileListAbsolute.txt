@@ -145,3 +145,4 @@ C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW-ConsultingAttendenceApp(FirstTrial).pdb
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.AdminForm.resources
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.UserControls.AddEmployeeUserControl.resources
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\obj\Debug\SW_ConsultingAttendenceApp_FirstTrial_.Forms.SignInForm.resources

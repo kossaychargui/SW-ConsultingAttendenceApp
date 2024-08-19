@@ -12,7 +12,6 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
         private TimeSpan MorningCheckOutTime;
         private TimeSpan EveningCheckInTime;
         private TimeSpan EveningCheckOutTime;
-        public int EmployeeID { get; set; }
 
         public clsDepartment department { get; set; }
 
