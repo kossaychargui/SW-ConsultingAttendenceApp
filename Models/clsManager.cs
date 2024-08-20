@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
-    internal class clsManager : clsUser
+    public class clsManager : clsUser
     {
         public clsDepartment Department { get; set; }
 

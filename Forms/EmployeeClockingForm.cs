@@ -73,15 +73,18 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 btn1.Text = "Check Out";
                 //btn1.Enabled = false;
                 checkInState = CheckInState.MorningCheckInApproval;
+                clsCurrentUser.LoggedInEmployee.MorningCheckIn();
             }
 
             else if (checkInState == CheckInState.MorningCheckInApproval)
             {
-           
+                if (!clsCurrentUser.LoggedInEmployee.CheckInRequest)
+                    return; // user will wait until manager approves his attendance
+                
                 btn1.Text = "Check In";
-
                 lbMorningLeavetime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EveningCheckIn;
+                clsCurrentUser.LoggedInEmployee.MorningCheckOut();
 
             }
             else if (checkInState == CheckInState.EveningCheckIn)
@@ -94,6 +97,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 btn1.Text = "Check Out";
                 lbEveningEntryTime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EveningCheckOut;
+                clsCurrentUser.LoggedInEmployee.EveningCheckIn();
 
             }
             else if (checkInState == CheckInState.EveningCheckOut)
@@ -101,7 +105,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 lbEveningLeaveTime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EndOfTheDay;
 
-                
+                clsCurrentUser.LoggedInEmployee.EveningCheckOut();
                 clsCurrentUser.LoggedInUser.Logout();
                 this.Hide();
             }

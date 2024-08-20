@@ -107,7 +107,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     emp.StartPosition = FormStartPosition.CenterScreen;
                     emp.Show();
                     emp.FormClosed += (s, args) => this.Close();
-                    clsCurrentUser.LoggedInUser = (clsEmployee)clsCurrentUser.LoggedInUser;
+                
 
                 }
                 else if (clsCurrentUser.LoggedInUser.RoleID == 1)
@@ -120,7 +120,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     manager.StartPosition = FormStartPosition.CenterScreen;
                     manager.Show();
                     manager.FormClosed += (s, args) => this.Close();
-                    clsCurrentUser.LoggedInUser = (clsManager)clsCurrentUser.LoggedInUser;
+                 
 
 
                 }
@@ -134,7 +134,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                     admin.StartPosition = FormStartPosition.CenterScreen;
                     admin.Show();
                     admin.FormClosed += (s, args) => this.Close();
-                    clsCurrentUser.LoggedInUser = (clsAdmin)clsCurrentUser.LoggedInUser;
+                
                 }
                 this.Hide();
             

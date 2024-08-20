@@ -114,8 +114,8 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
             timvcode.Stop(); 
 
             string to = tbEmail.Text; 
-            string from = "kossay134@gmail.com"; ss
-            string pass = ""// My application password
+            string from = "kossay134@gmail.com";
+            string pass = "";// My application password
             string mail = vcode.ToString(); 
 
             MailMessage mailMessage = new MailMessage();

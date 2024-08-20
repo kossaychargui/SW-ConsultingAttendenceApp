@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
-    internal class clsEmployee : clsUser
+    public class clsEmployee : clsUser
     {
         private TimeSpan MorningCheckInTime;
         private TimeSpan MorningCheckOutTime;

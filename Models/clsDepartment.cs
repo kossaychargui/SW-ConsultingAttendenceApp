@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
-    internal class clsDepartment
+    public class clsDepartment
     {
         public int DepartmentID { get; set; }
     }

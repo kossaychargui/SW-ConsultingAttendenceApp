@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 {
-    internal class clsAdmin : clsManager
+    public class clsAdmin : clsManager
     {
         public void AddEmployee(clsEmployee employee)
         {
