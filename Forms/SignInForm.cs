@@ -1,4 +1,5 @@
-﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+﻿using ServiceStack;
+using SW_ConsultingAttendenceApp_FirstTrial_.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
         }
 
         private int vcode = 1000;
+        private ErrorProvider errorProvider = new ErrorProvider();
         private void tbUsername_Enter(object sender, EventArgs e)
         {
             if (tbUsername.Text == "Username")
@@ -37,6 +39,12 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 tbUsername.Text = "Username";
                 tbUsername.ForeColor = Color.Silver;
             }
+            if (tbUsername.Text == "Username")
+            {
+                errorProvider.SetError(tbUsername, "Username Required");
+                return;
+            }
+
         }
 
         private void tbPassword_Enter(object sender, EventArgs e)
@@ -59,6 +67,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 tbPassword.PasswordChar = '\0';
 
             }
+            if (tbPassword.Text == "Password")
+            {
+                errorProvider.SetError(tbPassword, "Password Required");
+            }
         }
 
         private void tbEmail_Enter(object sender, EventArgs e)
@@ -78,6 +90,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 tbEmail.Text = "Email";
                 tbEmail.ForeColor = Color.Silver;
             }
+            if(tbEmail.Text == "Email")
+            {
+                errorProvider.SetError(tbEmail, "Email Required!");
+            }
         }
 
         private void tbVerificationCode_Enter(object sender, EventArgs e)
@@ -96,6 +112,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 tbVerificationCode.Text = "Verification Code";
                 tbVerificationCode.ForeColor = Color.Silver;
             }
+            if(tbVerificationCode.Text == "Verification Code")
+            {
+                errorProvider.SetError(tbVerificationCode, "Verification Code Required!");
+            }
         }
 
        
@@ -111,11 +131,17 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (CheckEmptyFields())
+            {
+                MessageBox.Show("Please Fill All the Fields", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
             timvcode.Stop(); 
 
             string to = tbEmail.Text; 
             string from = "kossay134@gmail.com";
-            string pass = "";// My application password
+            string pass = "kslm szke hmjn wdxr";// My application password
             string mail = vcode.ToString(); 
 
             MailMessage mailMessage = new MailMessage();
@@ -144,15 +170,27 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+            
             if (tbVerificationCode.Text == vcode.ToString())
             {
                 //clsUser user = getUser(tbEmail.Text);
                 //user.Username = tbUsername.Text;
                 //user.Password = tbPassword.Text;
                 //save to data base;
-                
+                MessageBox.Show("You are sign in successfully");
                 this.Close();
+               
             }
         }
+        private bool CheckEmptyFields()
+        {
+            return (tbUsername.Text == "Username" || tbPassword.Text == "Password" || tbEmail.Text == "Email");
+        }
+
+   
+           
+        
     }
+
+    
 }

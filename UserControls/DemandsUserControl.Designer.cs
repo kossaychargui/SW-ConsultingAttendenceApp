@@ -46,8 +46,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(28, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1036, 469);
             this.panel1.TabIndex = 0;
@@ -131,6 +130,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DemandsUserControl";
             this.Size = new System.Drawing.Size(1036, 469);
+            this.Load += new System.EventHandler(this.DemandsUserControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

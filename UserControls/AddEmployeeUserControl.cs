@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,13 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.UserControls
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearAllFields();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            clsEmployee emp = new clsEmployee();
+            emp.Email = tbEmail.Text;
+            clsCurrentUser.LoggedInAdmin.AddEmployee(emp);
         }
     }
 }

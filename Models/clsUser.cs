@@ -11,15 +11,29 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
     {
 
         public int UserID { get; set; }
-        public string FullName { get; set; }
+
+        public string Firstname { get; set; }
+
+        public string Lastname { get; set; }
+
+        public int Age { get; set; }    
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
 
+        public int DepartmentID { get; set; }
+
+        public bool CheckInRequest = false;
+
         public int RoleID {  get; set; }
         // 0 for admin 1 for manager and 2 for employees
 
+
+        public string FullName()
+        {
+            return Firstname + ' ' + Lastname;
+        }
         public static clsUser Login(string Username, string Password)
         {
             clsUser user = new clsUser();
@@ -31,7 +45,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                 user.RoleID = 1;
             else
                 user.RoleID = 2;
-            user.FullName= "Kossay";
+            user.Firstname= "Kossay";
             
             return user;
         }

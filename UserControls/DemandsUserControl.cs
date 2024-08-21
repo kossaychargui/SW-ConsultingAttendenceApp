@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         public DemandsUserControl()
         {
             InitializeComponent();
+        }
+
+        private void DemandsUserControl_Load(object sender, EventArgs e)
+        {
+
+
+
+            List<clsUser> users = clsUsersData.GetUsers();
+           dataGridView1.DataSource = users;
         }
     }
 }

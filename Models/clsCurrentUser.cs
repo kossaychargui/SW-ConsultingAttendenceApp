@@ -17,9 +17,5 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
         public static clsAdmin LoggedInAdmin { get; set; } = (clsAdmin)LoggedInUser;
 
 
-        
-        
-
-
     }
 }

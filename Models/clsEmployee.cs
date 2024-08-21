@@ -20,18 +20,22 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
         public void MorningCheckIn()
         {
             MorningCheckInTime = DateTime.Now.TimeOfDay;
+
         }
         public void MorningCheckOut()
         {
             MorningCheckOutTime = DateTime.Now.TimeOfDay;
+
         }
         public void EveningCheckIn()
         {
             EveningCheckInTime = DateTime.Now.TimeOfDay;
+
         }
         public void EveningCheckOut()
         {
             EveningCheckOutTime = DateTime.Now.TimeOfDay;
+
         }
 
         private TimeSpan GetMorningWorkingHours()
