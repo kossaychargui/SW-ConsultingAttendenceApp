@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using SW_ConsultingAttendenceApp_FirstTrial_.Models;
 using SW_ConsultingAttendenceApp_FirstTrial_.Forms;
+using SW_ConsultingAttendenceApp_FirstTrial_.GlobalVariables;
 
 
 namespace SW_ConsultingAttendenceApp_FirstTrial_
@@ -93,12 +94,18 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+
             clsCurrentUser.LoggedInUser = clsUser.Login(tbUsername.Text, tbPassword.Text);
-            if(clsCurrentUser.LoggedInUser != null)
+
+
+            if (clsCurrentUser.LoggedInUser != null)
             {
                 
                 if(clsCurrentUser.LoggedInUser.RoleID == 2)
                 {
+
+                    clsCurrentEmployee.Initialize(clsCurrentUser.LoggedInUser);
+
                     tbPassword.Text = "";
                     tbUsername.Text = "";
                     tbUsername_Leave(sender, e);
@@ -112,6 +119,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 }
                 else if (clsCurrentUser.LoggedInUser.RoleID == 1)
                 {
+                    clsCurrentManager.Initialize(clsCurrentUser.LoggedInUser);
                     tbPassword.Text = "";
                     tbUsername.Text = "";
                     tbUsername_Leave(sender, e);
@@ -126,6 +134,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 }
                 else
                 {
+                    clsCurrentAdmin.Initialize(clsCurrentUser.LoggedInUser);
                     tbPassword.Text = "";
                     tbUsername.Text = "";
                     tbUsername_Leave(sender, e);

@@ -41,10 +41,10 @@
             this.btnDemands = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.managerDashboard1 = new SW_ConsultingAttendenceApp_FirstTrial_.ManagerDashboard();
             this.addEmployeeUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.UserControls.AddEmployeeUserControl();
             this.demandsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.DemandsUserControl();
             this.reportsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.ReportsUserControl();
+            this.managerDashboard1 = new SW_ConsultingAttendenceApp_FirstTrial_.ManagerDashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -199,21 +199,13 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // managerDashboard1
-            // 
-            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
-            this.managerDashboard1.Location = new System.Drawing.Point(245, 0);
-            this.managerDashboard1.Name = "managerDashboard1";
-            this.managerDashboard1.Size = new System.Drawing.Size(1042, 464);
-            this.managerDashboard1.TabIndex = 6;
-            // 
             // addEmployeeUserControl1
             // 
             this.addEmployeeUserControl1.BackColor = System.Drawing.Color.SkyBlue;
-            this.addEmployeeUserControl1.Location = new System.Drawing.Point(252, 0);
+            this.addEmployeeUserControl1.Location = new System.Drawing.Point(245, 3);
             this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
             this.addEmployeeUserControl1.Size = new System.Drawing.Size(1036, 469);
-            this.addEmployeeUserControl1.TabIndex = 7;
+            this.addEmployeeUserControl1.TabIndex = 30;
             // 
             // demandsUserControl1
             // 
@@ -231,6 +223,14 @@
             this.reportsUserControl1.Size = new System.Drawing.Size(1043, 462);
             this.reportsUserControl1.TabIndex = 4;
             // 
+            // managerDashboard1
+            // 
+            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
+            this.managerDashboard1.Location = new System.Drawing.Point(245, 0);
+            this.managerDashboard1.Name = "managerDashboard1";
+            this.managerDashboard1.Size = new System.Drawing.Size(1042, 464);
+            this.managerDashboard1.TabIndex = 6;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,11 +238,11 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1287, 616);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.managerDashboard1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.reportsUserControl1);
+            this.Controls.Add(this.managerDashboard1);
             this.Controls.Add(this.addEmployeeUserControl1);
             this.Controls.Add(this.demandsUserControl1);
-            this.Controls.Add(this.reportsUserControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
             this.Text = "Admin Space";
@@ -263,7 +263,6 @@
         private ReportsUserControl reportsUserControl1;
         private DemandsUserControl demandsUserControl1;
         private ManagerDashboard managerDashboard1;
-        private UserControls.AddEmployeeUserControl addEmployeeUserControl1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnAddEmployee;
+        private UserControls.AddEmployeeUserControl addEmployeeUserControl1;
     }
 }

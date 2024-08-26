@@ -361,7 +361,10 @@
     <Compile Include="Forms\SignInForm.Designer.cs">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables\clsCurrentAdmin.cs" />
+    <Compile Include="GlobalVariables\clsCurrentManager.cs" />
     <Compile Include="Models\clsAdmin.cs" />
+    <Compile Include="GlobalVariables\clsCurrentEmployee.cs" />
     <Compile Include="Models\clsUsersData.cs" />
     <Compile Include="UserControls\AddEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
@@ -399,7 +402,7 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\clsCurrentUser.cs" />
+    <Compile Include="GlobalVariables\clsCurrentUser.cs" />
     <Compile Include="Models\clsDepartment.cs" />
     <Compile Include="Models\clsEmployee.cs" />
     <Compile Include="Models\clsManager.cs" />

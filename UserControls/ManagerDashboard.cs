@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,19 +40,17 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private int GetTotalEmployees() 
         {
-            //Code will be here
-            return 5;
+            return clsUsersData.GetNumberOfEmployees();
         }
         private int GetInactiveEmployees() 
         {
-            //Code will be here
-            return 3;
+            return clsUsersData.GetAbsentEmployeeCount();
         }
 
         private int GetActiveEmployees()
         {
-            //Code will be here
-            return 2;
+            return clsUsersData.GetActiveEmployeeCount();
+            
         }
     }
 }

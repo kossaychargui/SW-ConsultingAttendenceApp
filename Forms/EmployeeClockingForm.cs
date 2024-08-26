@@ -11,6 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static SW_ConsultingAttendenceApp_FirstTrial_.EmployeeClockingForm;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 
@@ -22,6 +24,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         {
             InitializeComponent();
         }
+        public DateTime? MorningCheckInTime;
+        public DateTime? MorningCheckOutTime;
+        public DateTime? EveningCheckInTime;
+        public DateTime? EveningCheckOutTime;
 
         public enum CheckInState { EmployeeArrived, MorningCheckInApproval, EveningCheckIn, EveningCheckOut, EndOfTheDay };
         public bool isCheckInApproval;
@@ -42,15 +48,108 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             notifyIcon1.BalloonTipText = Text;
             notifyIcon1.ShowBalloonTip(Time);
         }
-         
-       
+
+
         private void EmployeeClockingForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            checkInState = CheckInState.EmployeeArrived;
-           
-           
+
+            DateTime currentDate = DateTime.Now.Date;
+            DateTime morningEndTime = currentDate.AddHours(12); // 12:00 PM
+            DateTime lunchStartTime = currentDate.AddHours(13); // 1:00 PM
+            DateTime eveningEndTime = currentDate.AddHours(18); // 6:00 PM
+
+            // Load attendance records
+            clsUsersData.LoadAllAttendanceEvents(clsCurrentUser.LoggedInUser.UserID, currentDate, out MorningCheckInTime, out MorningCheckOutTime, out EveningCheckInTime, out EveningCheckOutTime);
+
+            if (MorningCheckInTime == null)
+            {
+                if (DateTime.Now <= morningEndTime)
+                {
+                    // The user has not checked in by 12:00 PM
+                    lbMorningEntryTime.Text = "-";
+                    checkInState = CheckInState.EmployeeArrived; // User hasn't arrived, so no further action can be taken
+                    btn1.Text = "Check In"; // Still allow checking in for the evening if needed
+                }
+                else
+                {
+                    // User marked absent
+                    lbMorningEntryTime.Text = "Absent";
+                    lbMorningLeavetime.Text = "Absent";
+                    checkInState = CheckInState.EndOfTheDay;
+                    btn1.Enabled = false;
+                }
+            }
+            else
+            {
+                lbMorningEntryTime.Text = MorningCheckInTime.ToString();
+
+                if (MorningCheckOutTime == null)
+                {
+                    if (DateTime.Now <= morningEndTime)
+                    {
+                        lbMorningLeavetime.Text = "-";
+                        checkInState = CheckInState.MorningCheckInApproval;
+                        btn1.Text = "Check Out";
+                    }
+                    else
+                    {
+                        // Automatically check out the user if they haven't checked out by 12:00 PM
+                        MorningCheckOutTime = morningEndTime;
+                        clsUsersData.SaveMorningCheckOut(clsCurrentUser.LoggedInUser.UserID, currentDate, MorningCheckOutTime.Value);
+
+                        lbMorningLeavetime.Text = MorningCheckOutTime.ToString();
+                        checkInState = CheckInState.EveningCheckIn; // Allow evening check-in
+                        btn1.Text = "Check In";
+                    }
+                }
+                else
+                {
+                    lbMorningLeavetime.Text = MorningCheckOutTime.ToString();
+                }
+            }
+
+            if (EveningCheckInTime == null)
+            {
+                if (DateTime.Now >= lunchStartTime && DateTime.Now <= eveningEndTime)
+                {
+                    lbEveningLeaveTime.Text = "-";
+                    checkInState = CheckInState.EveningCheckIn;
+                }
+                else
+                {
+                    lbEveningLeaveTime.Text = "Not Available";
+                }
+            }
+            else
+            {
+                lbEveningLeaveTime.Text = EveningCheckInTime.ToString();
+            }
+
+            if (EveningCheckOutTime == null)
+            {
+                if (DateTime.Now > eveningEndTime)
+                {
+
+                    EveningCheckOutTime = eveningEndTime;
+                    clsUsersData.SaveEveningCheckOut(clsCurrentUser.LoggedInUser.UserID, currentDate, EveningCheckOutTime.Value);
+
+                    checkInState = CheckInState.EndOfTheDay;
+                }
+                else
+                {
+                    lbEveningLeaveTime.Text = "-";
+                    checkInState = CheckInState.EveningCheckOut;
+                }
+            }
+            else
+            {
+                lbEveningLeaveTime.Text = EveningCheckOutTime.ToString();
+            }
         }
+
+
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -65,7 +164,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             btn1.FlatStyle = FlatStyle.Flat;
         }
 
-        private async void btn1_Click(object sender, EventArgs e)
+        private async void btn1_Click(object sender, EventArgs e)// it's one button that checks in and out for the mornign and the evenign
         {
             if (checkInState == CheckInState.EmployeeArrived)
             {
@@ -73,18 +172,21 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 btn1.Text = "Check Out";
                 //btn1.Enabled = false;
                 checkInState = CheckInState.MorningCheckInApproval;
-                clsCurrentUser.LoggedInEmployee.MorningCheckIn();
+                clsCurrentEmployee.CurrentEmployee.MorningCheckIn();
             }
 
             else if (checkInState == CheckInState.MorningCheckInApproval)
             {
-                if (!clsCurrentUser.LoggedInEmployee.CheckInRequest)
+                if (!clsUsersData.GetCheckInRequestStatus(clsCurrentEmployee.CurrentEmployee.UserID, DateTime.Now.Date))
+                {
+                    MessageBox.Show("Waiting For Your Admin/Manager Approval", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return; // user will wait until manager approves his attendance
+                }
                 
                 btn1.Text = "Check In";
                 lbMorningLeavetime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EveningCheckIn;
-                clsCurrentUser.LoggedInEmployee.MorningCheckOut();
+                clsCurrentEmployee.CurrentEmployee.MorningCheckOut();
 
             }
             else if (checkInState == CheckInState.EveningCheckIn)
@@ -97,7 +199,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 btn1.Text = "Check Out";
                 lbEveningEntryTime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EveningCheckOut;
-                clsCurrentUser.LoggedInEmployee.EveningCheckIn();
+                clsCurrentEmployee.CurrentEmployee.EveningCheckIn();
 
             }
             else if (checkInState == CheckInState.EveningCheckOut)
@@ -105,9 +207,9 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 lbEveningLeaveTime.Text = DateTime.Now.ToString();
                 checkInState = CheckInState.EndOfTheDay;
 
-                clsCurrentUser.LoggedInEmployee.EveningCheckOut();
+                clsCurrentEmployee.CurrentEmployee.EveningCheckOut();
                 clsCurrentUser.LoggedInUser.Logout();
-                this.Hide();
+               
             }
         }
 

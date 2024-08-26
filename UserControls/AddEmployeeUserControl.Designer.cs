@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbFullNames = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbAge = new System.Windows.Forms.TextBox();
@@ -54,6 +49,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,12 +62,24 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbFullNames);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(17, 17);
+            this.panel1.Location = new System.Drawing.Point(17, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1002, 167);
+            this.panel1.Size = new System.Drawing.Size(1002, 187);
             this.panel1.TabIndex = 0;
+            // 
+            // cbFullNames
+            // 
+            this.cbFullNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFullNames.FormattingEnabled = true;
+            this.cbFullNames.Location = new System.Drawing.Point(797, 23);
+            this.cbFullNames.Name = "cbFullNames";
+            this.cbFullNames.Size = new System.Drawing.Size(168, 24);
+            this.cbFullNames.TabIndex = 3;
+            this.cbFullNames.SelectedIndexChanged += new System.EventHandler(this.cbFullNames_SelectedIndexChanged);
+            this.cbFullNames.Click += new System.EventHandler(this.cbFullNames_Click);
             // 
             // dataGridView1
             // 
@@ -76,63 +89,21 @@
             this.FirstName,
             this.Lastname,
             this.Email,
-            this.Phone,
             this.Age,
+            this.Phone,
             this.Department});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(980, 108);
             this.dataGridView1.TabIndex = 2;
             // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.Width = 125;
-            // 
-            // Lastname
-            // 
-            this.Lastname.HeaderText = "Lastname";
-            this.Lastname.MinimumWidth = 6;
-            this.Lastname.Name = "Lastname";
-            this.Lastname.Width = 125;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.Width = 125;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.MinimumWidth = 6;
-            this.Phone.Name = "Phone";
-            this.Phone.Width = 125;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.MinimumWidth = 6;
-            this.Age.Name = "Age";
-            this.Age.Width = 125;
-            // 
-            // Department
-            // 
-            this.Department.HeaderText = "Department";
-            this.Department.MinimumWidth = 6;
-            this.Department.Name = "Department";
-            this.Department.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 1;
@@ -156,9 +127,9 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(17, 190);
+            this.panel2.Location = new System.Drawing.Point(17, 208);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1002, 260);
+            this.panel2.Size = new System.Drawing.Size(1002, 242);
             this.panel2.TabIndex = 1;
             // 
             // tbAge
@@ -168,6 +139,7 @@
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(172, 22);
             this.tbAge.TabIndex = 7;
+            this.tbAge.TextChanged += new System.EventHandler(this.tbAge_TextChanged);
             // 
             // label7
             // 
@@ -186,6 +158,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(172, 22);
             this.tbEmail.TabIndex = 6;
+            this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
             // 
             // label6
             // 
@@ -212,6 +185,7 @@
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(172, 24);
             this.cbDepartment.TabIndex = 9;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
             // tbPhoneNumber
             // 
@@ -220,6 +194,7 @@
             this.tbPhoneNumber.Name = "tbPhoneNumber";
             this.tbPhoneNumber.Size = new System.Drawing.Size(172, 22);
             this.tbPhoneNumber.TabIndex = 8;
+            this.tbPhoneNumber.TextChanged += new System.EventHandler(this.tbPhoneNumber_TextChanged);
             // 
             // tbLastName
             // 
@@ -228,6 +203,7 @@
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(172, 22);
             this.tbLastName.TabIndex = 5;
+            this.tbLastName.TextChanged += new System.EventHandler(this.tbLastName_TextChanged);
             // 
             // tbFirstName
             // 
@@ -236,6 +212,7 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(172, 22);
             this.tbFirstName.TabIndex = 4;
+            this.tbFirstName.TextChanged += new System.EventHandler(this.tbFirstName_TextChanged);
             // 
             // btnClear
             // 
@@ -257,6 +234,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -267,6 +245,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -319,6 +298,50 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name :";
             // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.MinimumWidth = 6;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Width = 125;
+            // 
+            // Lastname
+            // 
+            this.Lastname.HeaderText = "Lastname";
+            this.Lastname.MinimumWidth = 6;
+            this.Lastname.Name = "Lastname";
+            this.Lastname.Width = 125;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.Width = 125;
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Age";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            this.Age.Width = 125;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.MinimumWidth = 6;
+            this.Phone.Name = "Phone";
+            this.Phone.Width = 125;
+            // 
+            // Department
+            // 
+            this.Department.HeaderText = "Department";
+            this.Department.MinimumWidth = 6;
+            this.Department.Name = "Department";
+            this.Department.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Department.Width = 125;
+            // 
             // AddEmployeeUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,11 +382,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbFullNames;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
     }
 }

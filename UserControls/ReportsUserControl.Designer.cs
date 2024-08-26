@@ -30,20 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbDailyRange = new System.Windows.Forms.RadioButton();
+            this.rbMonthly = new System.Windows.Forms.RadioButton();
+            this.rbDaily = new System.Windows.Forms.RadioButton();
+            this.rbWeakly = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cbFullNames = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,13 +56,6 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(21, 165);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -76,54 +63,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1000, 286);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "First Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Last Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Morning CheckIn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Evening CheckOut";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Date";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Total Working Hours";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.rbDailyRange);
+            this.groupBox1.Controls.Add(this.rbMonthly);
+            this.groupBox1.Controls.Add(this.rbDaily);
+            this.groupBox1.Controls.Add(this.rbWeakly);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 38);
             this.groupBox1.Name = "groupBox1";
@@ -132,57 +77,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Period";
             // 
-            // radioButton4
+            // rbDailyRange
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(109, 65);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 20);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Date Range";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.rbDailyRange.AutoSize = true;
+            this.rbDailyRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDailyRange.Location = new System.Drawing.Point(109, 65);
+            this.rbDailyRange.Name = "rbDailyRange";
+            this.rbDailyRange.Size = new System.Drawing.Size(101, 20);
+            this.rbDailyRange.TabIndex = 6;
+            this.rbDailyRange.Text = "Date Range";
+            this.rbDailyRange.UseVisualStyleBackColor = true;
+            this.rbDailyRange.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton3
+            // rbMonthly
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(109, 31);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(74, 20);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Monthly";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbMonthly.AutoSize = true;
+            this.rbMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMonthly.Location = new System.Drawing.Point(109, 31);
+            this.rbMonthly.Name = "rbMonthly";
+            this.rbMonthly.Size = new System.Drawing.Size(74, 20);
+            this.rbMonthly.TabIndex = 5;
+            this.rbMonthly.Text = "Monthly";
+            this.rbMonthly.UseVisualStyleBackColor = true;
+            this.rbMonthly.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
-            // radioButton1
+            // rbDaily
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 31);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 20);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Daily";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbDaily.AutoSize = true;
+            this.rbDaily.Checked = true;
+            this.rbDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDaily.Location = new System.Drawing.Point(6, 31);
+            this.rbDaily.Name = "rbDaily";
+            this.rbDaily.Size = new System.Drawing.Size(59, 20);
+            this.rbDaily.TabIndex = 3;
+            this.rbDaily.TabStop = true;
+            this.rbDaily.Text = "Daily";
+            this.rbDaily.UseVisualStyleBackColor = true;
+            this.rbDaily.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
-            // radioButton2
+            // rbWeakly
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 65);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 20);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Weakly";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbWeakly.AutoSize = true;
+            this.rbWeakly.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbWeakly.Location = new System.Drawing.Point(6, 65);
+            this.rbWeakly.Name = "rbWeakly";
+            this.rbWeakly.Size = new System.Drawing.Size(74, 20);
+            this.rbWeakly.TabIndex = 4;
+            this.rbWeakly.Text = "Weakly";
+            this.rbWeakly.UseVisualStyleBackColor = true;
+            this.rbWeakly.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
             // dateTimePicker1
             // 
@@ -198,22 +141,23 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 4;
             // 
-            // label2
+            // cbFullNames
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(761, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Check Employee(s)";
+            this.cbFullNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFullNames.FormattingEnabled = true;
+            this.cbFullNames.Location = new System.Drawing.Point(869, 69);
+            this.cbFullNames.Name = "cbFullNames";
+            this.cbFullNames.Size = new System.Drawing.Size(152, 24);
+            this.cbFullNames.TabIndex = 5;
+            this.cbFullNames.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbFullNames.Click += new System.EventHandler(this.cbFullNames_Click);
             // 
             // ReportsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbFullNames);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox1);
@@ -234,18 +178,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.RadioButton rbMonthly;
+        private System.Windows.Forms.RadioButton rbDaily;
+        private System.Windows.Forms.RadioButton rbWeakly;
+        private System.Windows.Forms.RadioButton rbDailyRange;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbFullNames;
     }
 }

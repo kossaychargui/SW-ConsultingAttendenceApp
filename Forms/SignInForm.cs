@@ -177,7 +177,13 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 //user.Username = tbUsername.Text;
                 //user.Password = tbPassword.Text;
                 //save to data base;
-                MessageBox.Show("You are sign in successfully");
+                clsUser user = clsUsersData.GetUserByEmail(tbEmail.Text);
+                user.Username = tbUsername.Text;
+                user.Password = tbPassword.Text;
+                if (clsUsersData.UpdateUser(user))
+                    MessageBox.Show("You are sign in successfully", "Successful Operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Failed Updating User Authentication Info", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
                
             }
