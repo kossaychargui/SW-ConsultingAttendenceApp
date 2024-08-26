@@ -30,13 +30,13 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
         {
             MorningCheckOutTime = DateTime.Now;
             //save Morning CheckOUt into db
-            clsUsersData.SaveEveningCheckOut(clsCurrentUser.LoggedInUser.UserID, DateTime.Now.Date, MorningCheckOutTime);
+            clsUsersData.SaveMorningCheckOut(clsCurrentUser.LoggedInUser.UserID, DateTime.Now.Date, MorningCheckOutTime);
         }
         public void EveningCheckIn()
         {
             EveningCheckInTime = DateTime.Now;
             // save Evening CheckIn into db
-            clsUsersData.SaveEveningCheckOut(clsCurrentUser.LoggedInUser.UserID, DateTime.Now.Date, EveningCheckInTime);
+            clsUsersData.SaveEveningCheckIn(clsCurrentUser.LoggedInUser.UserID, DateTime.Now.Date, EveningCheckInTime);
 
         }
         public void EveningCheckOut()

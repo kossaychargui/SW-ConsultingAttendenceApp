@@ -20,27 +20,22 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
 
 
-       
-
-   
-
-   
-
         private void AdminForm_Load(object sender, EventArgs e)
         {
             btnDashboard_Click_1(sender, e);
+            lbWelcomeUser.Text = $"Welcome,\n{clsCurrentUser.LoggedInUser.Firstname}";
         }
 
         private void btnDashboard_Click_1(object sender, EventArgs e)
         {
             managerDashboard1.Visible = true;
-            managerDashboard1.Dock = DockStyle.Right;
+         //   managerDashboard1.Dock = DockStyle.Right;
             demandsUserControl1.Visible = false;
-            demandsUserControl1.Dock = DockStyle.None;
+           // demandsUserControl1.Dock = DockStyle.None;
             reportsUserControl1.Visible = false;
-            reportsUserControl1.Dock = DockStyle.None;
+            //reportsUserControl1.Dock = DockStyle.None;
             addEmployeeUserControl1.Visible = false;
-            addEmployeeUserControl1.Dock = DockStyle.None;
+            //addEmployeeUserControl1.Dock = DockStyle.None;
         }
 
         private void btnDemands_Click_1(object sender, EventArgs e)
@@ -50,10 +45,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             reportsUserControl1.Visible = false;
             addEmployeeUserControl1.Visible = false;
 
-            addEmployeeUserControl1.Dock = DockStyle.None;
-            reportsUserControl1.Dock = DockStyle.None;
-            managerDashboard1.Dock = DockStyle.None;
-            demandsUserControl1.Dock = DockStyle.Right;
+            //addEmployeeUserControl1.Dock = DockStyle.None;
+            //reportsUserControl1.Dock = DockStyle.None;
+            //managerDashboard1.Dock = DockStyle.None;
+            //demandsUserControl1.Dock = DockStyle.Right;
         }
 
         private void btnReports_Click_1(object sender, EventArgs e)
@@ -62,10 +57,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             managerDashboard1.Visible = false;
             demandsUserControl1.Visible = false;
             reportsUserControl1.Visible = true;
-            addEmployeeUserControl1.Dock = DockStyle.None;
-            demandsUserControl1.Dock = DockStyle.None;
-            managerDashboard1.Dock = DockStyle.None;
-            reportsUserControl1.Dock = DockStyle.Right;
+            //addEmployeeUserControl1.Dock = DockStyle.None;
+            //demandsUserControl1.Dock = DockStyle.None;
+            //managerDashboard1.Dock = DockStyle.None;
+            //reportsUserControl1.Dock = DockStyle.Right;
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
@@ -74,10 +69,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             demandsUserControl1.Visible = false;
             reportsUserControl1.Visible = false;
             addEmployeeUserControl1.Visible = true;
-            demandsUserControl1.Dock = DockStyle.None;
-            managerDashboard1.Dock = DockStyle.None;
-            reportsUserControl1.Dock = DockStyle.None;
-            addEmployeeUserControl1.Dock = DockStyle.Right;
+            //demandsUserControl1.Dock = DockStyle.None;
+            //managerDashboard1.Dock = DockStyle.None;
+            //reportsUserControl1.Dock = DockStyle.None;
+            //addEmployeeUserControl1.Dock = DockStyle.Right;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

@@ -38,8 +38,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.cbFullNames = new System.Windows.Forms.ComboBox();
+            this.btnExportToPdf = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportToPdf)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -145,18 +147,30 @@
             // 
             this.cbFullNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFullNames.FormattingEnabled = true;
-            this.cbFullNames.Location = new System.Drawing.Point(869, 69);
+            this.cbFullNames.Location = new System.Drawing.Point(841, 99);
             this.cbFullNames.Name = "cbFullNames";
-            this.cbFullNames.Size = new System.Drawing.Size(152, 24);
+            this.cbFullNames.Size = new System.Drawing.Size(180, 24);
             this.cbFullNames.TabIndex = 5;
             this.cbFullNames.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.cbFullNames.Click += new System.EventHandler(this.cbFullNames_Click);
+            // 
+            // btnExportToPdf
+            // 
+            this.btnExportToPdf.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_print_100;
+            this.btnExportToPdf.Location = new System.Drawing.Point(966, 10);
+            this.btnExportToPdf.Name = "btnExportToPdf";
+            this.btnExportToPdf.Size = new System.Drawing.Size(55, 48);
+            this.btnExportToPdf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExportToPdf.TabIndex = 32;
+            this.btnExportToPdf.TabStop = false;
+            this.btnExportToPdf.Click += new System.EventHandler(this.btnExportToPdf_Click);
             // 
             // ReportsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
+            this.Controls.Add(this.btnExportToPdf);
             this.Controls.Add(this.cbFullNames);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -168,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportToPdf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +200,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox cbFullNames;
+        private System.Windows.Forms.PictureBox btnExportToPdf;
     }
 }

@@ -525,7 +525,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         if (recordCount > 0)
                         {
                             // Update the existing record
-                            string updateQuery = "UPDATE Attendances SET MorningCheckOut = @MorningCheckOut, Request = @Request WHERE UserID = @UserID AND Date = @Date";
+                            string updateQuery = "UPDATE Attendances SET MorningCheckOut = @MorningCheckOut WHERE UserID = @UserID AND Date = @Date";
                             using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                             {
                                 updateCommand.Parameters.AddWithValue("@UserID", userId);
@@ -540,7 +540,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         else
                         {
                             // Insert a new record
-                            string insertQuery = "INSERT INTO Attendances (UserID, Date, MorningCheckOut, Request) VALUES (@UserID, @Date, @MorningCheckOut, @Request)";
+                            string insertQuery = "INSERT INTO Attendances (UserID, Date, MorningCheckOut) VALUES (@UserID, @Date, @MorningCheckOut)";
                             using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
                             {
                                 insertCommand.Parameters.AddWithValue("@UserID", userId);
@@ -595,7 +595,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         if (recordCount > 0)
                         {
                             // Update the existing record
-                            string updateQuery = "UPDATE Attendances SET EveningCheckIn = @EveningCheckIn, Request = @Request WHERE UserID = @UserID AND Date = @Date";
+                            string updateQuery = "UPDATE Attendances SET EveningCheckIn = @EveningCheckIn WHERE UserID = @UserID AND Date = @Date";
                             using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                             {
                                 updateCommand.Parameters.AddWithValue("@UserID", userId);
@@ -610,7 +610,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         else
                         {
                             // Insert a new record
-                            string insertQuery = "INSERT INTO Attendances (UserID, Date, EveningCheckIn, Request) VALUES (@UserID, @Date, @EveningCheckIn, @Request)";
+                            string insertQuery = "INSERT INTO Attendances (UserID, Date, EveningCheckIn) VALUES (@UserID, @Date, @EveningCheckIn)";
                             using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
                             {
                                 insertCommand.Parameters.AddWithValue("@UserID", userId);
@@ -666,7 +666,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         if (recordCount > 0)
                         {
                             // Update the existing record
-                            string updateQuery = "UPDATE Attendances SET EveningCheckOut = @EveningCheckOut, Request = @Request WHERE UserID = @UserID AND Date = @Date";
+                            string updateQuery = "UPDATE Attendances SET EveningCheckOut = @EveningCheckOut WHERE UserID = @UserID AND Date = @Date";
                             using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                             {
                                 updateCommand.Parameters.AddWithValue("@UserID", userId);
@@ -681,7 +681,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         else
                         {
                             // Insert a new record
-                            string insertQuery = "INSERT INTO Attendances (UserID, Date, EveningCheckOut, Request) VALUES (@UserID, @Date, @EveningCheckOut, @Request)";
+                            string insertQuery = "INSERT INTO Attendances (UserID, Date, EveningCheckOut) VALUES (@UserID, @Date, @EveningCheckOut)";
                             using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
                             {
                                 insertCommand.Parameters.AddWithValue("@UserID", userId);

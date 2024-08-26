@@ -198,3 +198,14 @@ C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\pt-
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\libSkiaSharp.dylib
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\iTextSharp.LGPLv2.Core.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SkiaSharp.dll
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\iTextSharp.LGPLv2.Core.xml
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SkiaSharp.pdb
+C:\Users\Media\source\repos\SW-ConsultingAttendenceApp(FirstTrial)\bin\Debug\SkiaSharp.xml

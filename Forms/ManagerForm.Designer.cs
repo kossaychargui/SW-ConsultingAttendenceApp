@@ -164,6 +164,7 @@
             // 
             // reportsUserControl1
             // 
+            this.reportsUserControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reportsUserControl1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.reportsUserControl1.Location = new System.Drawing.Point(245, 0);
             this.reportsUserControl1.Name = "reportsUserControl1";
@@ -172,6 +173,7 @@
             // 
             // demandsUserControl1
             // 
+            this.demandsUserControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.demandsUserControl1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.demandsUserControl1.Location = new System.Drawing.Point(245, -1);
             this.demandsUserControl1.Name = "demandsUserControl1";
@@ -180,6 +182,7 @@
             // 
             // managerDashboard1
             // 
+            this.managerDashboard1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
             this.managerDashboard1.Location = new System.Drawing.Point(233, 0);
             this.managerDashboard1.Name = "managerDashboard1";
@@ -205,10 +208,10 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1287, 616);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.reportsUserControl1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.demandsUserControl1);
             this.Controls.Add(this.managerDashboard1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.reportsUserControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerForm";
             this.Text = "Manager Space";

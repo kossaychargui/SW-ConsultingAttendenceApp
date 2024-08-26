@@ -43,7 +43,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            lbWelcomeUser.Text = "Welcome,\n" + clsCurrentUser.LoggedInUser.Username;
+            lbWelcomeUser.Text = "Welcome,\n" + clsCurrentUser.LoggedInUser.Firstname;
             managerDashboard1.Visible = true;
             demandsUserControl1.Visible = false;
             reportsUserControl1.Visible = false;

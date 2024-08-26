@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbWelcomeUser = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnDemands = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.addEmployeeUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.UserControls.AddEmployeeUserControl();
-            this.demandsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.DemandsUserControl();
             this.reportsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.ReportsUserControl();
             this.managerDashboard1 = new SW_ConsultingAttendenceApp_FirstTrial_.ManagerDashboard();
+            this.addEmployeeUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.UserControls.AddEmployeeUserControl();
+            this.demandsUserControl1 = new SW_ConsultingAttendenceApp_FirstTrial_.DemandsUserControl();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,17 +73,6 @@
             this.panel1.Size = new System.Drawing.Size(239, 616);
             this.panel1.TabIndex = 29;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox5.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_reports_50;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 444);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
             // btnAddEmployee
             // 
             this.btnAddEmployee.BackColor = System.Drawing.Color.SkyBlue;
@@ -96,28 +85,6 @@
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox4.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_reports_50;
-            this.pictureBox4.Location = new System.Drawing.Point(20, 368);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox3.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_demand_50;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 293);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
             // lbWelcomeUser
             // 
             this.lbWelcomeUser.AutoSize = true;
@@ -127,27 +94,6 @@
             this.lbWelcomeUser.Size = new System.Drawing.Size(144, 24);
             this.lbWelcomeUser.TabIndex = 1;
             this.lbWelcomeUser.Text = "Welcome, User";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox2.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_dashboard_50;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 222);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.managerSpaceIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnReports
             // 
@@ -187,6 +133,42 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
             // 
+            // reportsUserControl1
+            // 
+            this.reportsUserControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.reportsUserControl1.BackColor = System.Drawing.Color.SkyBlue;
+            this.reportsUserControl1.Location = new System.Drawing.Point(245, 0);
+            this.reportsUserControl1.Name = "reportsUserControl1";
+            this.reportsUserControl1.Size = new System.Drawing.Size(1043, 462);
+            this.reportsUserControl1.TabIndex = 4;
+            // 
+            // managerDashboard1
+            // 
+            this.managerDashboard1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
+            this.managerDashboard1.Location = new System.Drawing.Point(245, 0);
+            this.managerDashboard1.Name = "managerDashboard1";
+            this.managerDashboard1.Size = new System.Drawing.Size(1042, 464);
+            this.managerDashboard1.TabIndex = 6;
+            // 
+            // addEmployeeUserControl1
+            // 
+            this.addEmployeeUserControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addEmployeeUserControl1.BackColor = System.Drawing.Color.SkyBlue;
+            this.addEmployeeUserControl1.Location = new System.Drawing.Point(245, 3);
+            this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
+            this.addEmployeeUserControl1.Size = new System.Drawing.Size(1036, 469);
+            this.addEmployeeUserControl1.TabIndex = 30;
+            // 
+            // demandsUserControl1
+            // 
+            this.demandsUserControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.demandsUserControl1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.demandsUserControl1.Location = new System.Drawing.Point(245, -2);
+            this.demandsUserControl1.Name = "demandsUserControl1";
+            this.demandsUserControl1.Size = new System.Drawing.Size(1046, 464);
+            this.demandsUserControl1.TabIndex = 5;
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,37 +181,59 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // addEmployeeUserControl1
+            // pictureBox5
             // 
-            this.addEmployeeUserControl1.BackColor = System.Drawing.Color.SkyBlue;
-            this.addEmployeeUserControl1.Location = new System.Drawing.Point(245, 3);
-            this.addEmployeeUserControl1.Name = "addEmployeeUserControl1";
-            this.addEmployeeUserControl1.Size = new System.Drawing.Size(1036, 469);
-            this.addEmployeeUserControl1.TabIndex = 30;
+            this.pictureBox5.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox5.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_reports_50;
+            this.pictureBox5.Location = new System.Drawing.Point(20, 444);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(39, 28);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
             // 
-            // demandsUserControl1
+            // pictureBox4
             // 
-            this.demandsUserControl1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.demandsUserControl1.Location = new System.Drawing.Point(245, -2);
-            this.demandsUserControl1.Name = "demandsUserControl1";
-            this.demandsUserControl1.Size = new System.Drawing.Size(1046, 464);
-            this.demandsUserControl1.TabIndex = 5;
+            this.pictureBox4.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox4.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_reports_50;
+            this.pictureBox4.Location = new System.Drawing.Point(20, 368);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
             // 
-            // reportsUserControl1
+            // pictureBox3
             // 
-            this.reportsUserControl1.BackColor = System.Drawing.Color.SkyBlue;
-            this.reportsUserControl1.Location = new System.Drawing.Point(245, 0);
-            this.reportsUserControl1.Name = "reportsUserControl1";
-            this.reportsUserControl1.Size = new System.Drawing.Size(1043, 462);
-            this.reportsUserControl1.TabIndex = 4;
+            this.pictureBox3.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox3.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_demand_50;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 293);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
-            // managerDashboard1
+            // pictureBox2
             // 
-            this.managerDashboard1.BackColor = System.Drawing.Color.SkyBlue;
-            this.managerDashboard1.Location = new System.Drawing.Point(245, 0);
-            this.managerDashboard1.Name = "managerDashboard1";
-            this.managerDashboard1.Size = new System.Drawing.Size(1042, 464);
-            this.managerDashboard1.TabIndex = 6;
+            this.pictureBox2.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox2.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.icons8_dashboard_50;
+            this.pictureBox2.Location = new System.Drawing.Point(23, 222);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SW_ConsultingAttendenceApp_FirstTrial_.Properties.Resources.managerSpaceIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(53, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminForm
             // 
@@ -249,12 +253,12 @@
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
