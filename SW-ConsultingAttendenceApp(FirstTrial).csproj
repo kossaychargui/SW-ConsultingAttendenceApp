@@ -374,7 +374,7 @@
     <Compile Include="GlobalVariables\clsCurrentManager.cs" />
     <Compile Include="Models\clsAdmin.cs" />
     <Compile Include="GlobalVariables\clsCurrentEmployee.cs" />
-    <Compile Include="Models\clsUsersData.cs" />
+    <Compile Include="DBclass\clsUsersData.cs" />
     <Compile Include="UserControls\AddEmployeeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -588,6 +588,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-print-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

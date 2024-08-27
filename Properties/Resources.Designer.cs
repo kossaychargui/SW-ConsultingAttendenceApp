@@ -283,6 +283,16 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_information_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-information-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_logout_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-logout-100", resourceCulture);

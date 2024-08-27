@@ -89,7 +89,7 @@
             this.rbDailyRange.TabIndex = 6;
             this.rbDailyRange.Text = "Date Range";
             this.rbDailyRange.UseVisualStyleBackColor = true;
-            this.rbDailyRange.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.rbDailyRange.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // rbMonthly
             // 
@@ -101,7 +101,7 @@
             this.rbMonthly.TabIndex = 5;
             this.rbMonthly.Text = "Monthly";
             this.rbMonthly.UseVisualStyleBackColor = true;
-            this.rbMonthly.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbMonthly.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // rbDaily
             // 
@@ -115,7 +115,7 @@
             this.rbDaily.TabStop = true;
             this.rbDaily.Text = "Daily";
             this.rbDaily.UseVisualStyleBackColor = true;
-            this.rbDaily.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbDaily.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // rbWeakly
             // 
@@ -127,7 +127,7 @@
             this.rbWeakly.TabIndex = 4;
             this.rbWeakly.Text = "Weakly";
             this.rbWeakly.UseVisualStyleBackColor = true;
-            this.rbWeakly.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            this.rbWeakly.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // dateTimePicker1
             // 

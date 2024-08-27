@@ -888,23 +888,28 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                     throw new ArgumentException("Invalid report type specified.");
             }
 
-            // SQL Query to fetch user attendance data within the specified date range
-            string query = @"
-    SELECT 
-        u.Firstname, 
-        u.Lastname, 
-        a.Date,
-        a.MorningCheckIn,
-        a.EveningCheckOut,
-        DATEDIFF(HOUR, a.MorningCheckIn, a.EveningCheckOut) - 1 AS prod -- Assuming a 1-hour lunch break
-    FROM 
-        Users u
-    INNER JOIN 
-        Attendances a ON u.UserID = a.UserID
-    WHERE 
-        u.UserID = @UserID AND
-        a.Date BETWEEN @StartDate AND @EndDate
-    ORDER BY a.Date";
+            // SQL Query to fetch user attendance data within the specified date range, excluding weekends and holidays
+            string query = @"SELECT 
+    u.Firstname, 
+    u.Lastname, 
+    a.Date,
+    a.MorningCheckIn,
+    a.EveningCheckOut,
+    DATEDIFF(HOUR, a.MorningCheckIn, a.MorningCheckOut) + DATEDIFF(HOUR, a.EveningCheckIn, a.EveningCheckOut) AS TotalHoursWorked
+FROM 
+    Users u
+INNER JOIN 
+    Attendances a ON u.UserID = a.UserID
+LEFT JOIN 
+    Holidays h ON a.Date = h.HolidayDate
+WHERE 
+    u.UserID = @UserID AND
+    a.Date BETWEEN @StartDate AND @EndDate AND
+    DATENAME(WEEKDAY, a.Date) NOT IN ('Saturday', 'Sunday') AND
+    h.HolidayDate IS NULL
+ORDER BY 
+    a.Date;
+";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -930,6 +935,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
 
             return dataTable;
         }
+
 
 
 

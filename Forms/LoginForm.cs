@@ -33,24 +33,14 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         private void LoginForm_Load(object sender, EventArgs e)
         {
             pbLogo.Region = GetRoundedImagePictureBox(pbLogo);
-           
 
+            ToolTip toolTip = new ToolTip();
+
+            // Set the tooltip text for a button
+            toolTip.SetToolTip(pbInformation, "To Reset Password You can Re-SignIn and Update Your Username/Password");
         }
 
-        private void LoginForm_Paint(object sender, PaintEventArgs e)
-        {
-            //Color gray = Color.Gray;
-            //Pen pen = new Pen(gray);
-            //pen.Width = 2;
-            //pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-            //pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-
-            
-            //Point StartPoint = new Point(420, 30);
-            //Point EndPoint = new Point(420, 330);
-
-            //e.Graphics.DrawLine(pen, StartPoint, EndPoint);
-        }
+      
 
         private void tbUsername_Enter(object sender, EventArgs e)
         {
@@ -170,5 +160,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             signInForm.StartPosition = FormStartPosition.CenterScreen;
             signInForm.Show();
         }
+
+
     }
 }

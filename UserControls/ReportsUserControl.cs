@@ -56,6 +56,11 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            LoadReport();
+        }
+
+        private void LoadReport()
+        {
             string selectedFullName = cbFullNames.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(selectedFullName))
@@ -94,7 +99,6 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 MessageBox.Show("User not found.");
             }
         }
-
         private void LoadUserAttendanceReport(int userId, string reportType, DateTime? startDate = null, DateTime? endDate = null)
         {
             DataTable attendanceData;
@@ -198,6 +202,11 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             {
                 pdfDoc.Close();
             }
+        }
+
+        private void rbDaily_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadReport();
         }
     }
 }

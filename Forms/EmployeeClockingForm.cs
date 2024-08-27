@@ -75,6 +75,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private CheckInState GetCheckInState()
         {
+            
             DateTime CurrentTime = DateTime.Now;
            if(MorningCheckInTime == null)
             {
@@ -111,8 +112,15 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 btn1.Text = "Check In";
                 return CheckInState.EveningCheckIn;
             }
-            else
+            if (MorningCheckInTime != null && MorningCheckOutTime != null && EveningCheckInTime != null && EveningCheckOutTime == null)
+            {
+                btn1.Text = "Check Out";
                 return CheckInState.EveningCheckOut;
+            }
+            else
+                btn1.Text = "EndOfDay";
+                btn1.Enabled = false;
+                return CheckInState.EndOfTheDay;
         }
  
         private void FillTimeLabelsValues()
