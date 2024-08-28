@@ -1,0 +1,10 @@
+CREATE PROCEDURE AutoCheckoutMissingEntries
+AS
+BEGIN
+    -- Update records where EveningCheckIn is not NULL and EveningCheckOut is NULL, for today's date
+    UPDATE Attendances
+    SET EveningCheckOut = CAST('18:00:00' AS TIME)
+    WHERE Date = CAST(GETDATE() AS DATE)
+      AND EveningCheckIn IS NOT NULL
+      AND EveningCheckOut IS NULL;
+END

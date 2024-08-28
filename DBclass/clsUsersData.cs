@@ -64,14 +64,64 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
             return users;
         }
 
-       
+
 
         // Method to update a user's details
-        public static bool UpdateUser(clsUser user)
+        //public static bool UpdateUser(clsUser user)
+        //{
+        //    string query = "UPDATE Users SET Firstname = @Firstname," +
+        //        "Lastname = @Lastname, Age = @Age, Email = @Email," +
+        //        "Phone = @Phone, Username = @Username, Password = @Password, DepartmentID = @DepartmentID WHERE UserID = @UserID";
+
+        //    using (SqlConnection connection = new SqlConnection(_connectionString))
+        //    {
+        //        try
+        //        {
+        //            connection.Open();
+
+        //            using (SqlCommand command = new SqlCommand(query, connection))
+        //            {
+        //                command.Parameters.AddWithValue("@UserID", user.UserID);
+        //                command.Parameters.AddWithValue("@Firstname", user.Firstname);
+        //                command.Parameters.AddWithValue("@Lastname", user.Lastname);
+        //                command.Parameters.AddWithValue("@Age", user.Age);
+        //                command.Parameters.AddWithValue("@Email", user.Email);
+        //                command.Parameters.AddWithValue("@Username", user.Username);
+        //                command.Parameters.AddWithValue("@Password", user.Password);
+        //                command.Parameters.AddWithValue("@Phone", user.Phone);
+        //                command.Parameters.AddWithValue("@DepartmentID", user.DepartmentID);
+        //                int rowsAffected = command.ExecuteNonQuery();
+        //                return rowsAffected > 0;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            // Handle exceptions (log them, rethrow them, etc.)
+        //            MessageBox.Show ("An error occurred: " + ex.Message);
+        //            return false;
+        //        }
+        //    }
+        //}
+
+        public static bool UpdateUser(clsUser user, bool skipUsername = false, bool skipPassword = false)
         {
-            string query = "UPDATE Users SET Firstname = @Firstname," +
-                "Lastname = @Lastname, Age = @Age, Email = @Email," +
-                "Phone = @Phone, Username = @Username, Password = @Password, DepartmentID = @DepartmentID WHERE UserID = @UserID";
+            // Build the base query
+            string query = "UPDATE Users SET Firstname = @Firstname, " +
+                "Lastname = @Lastname, Age = @Age, Email = @Email, " +
+                "Phone = @Phone, DepartmentID = @DepartmentID";
+
+            // Add optional fields
+            if (!skipUsername)
+            {
+                query += ", Username = @Username";
+            }
+            if (!skipPassword)
+            {
+                query += ", Password = @Password";
+            }
+
+            // Complete the query
+            query += " WHERE UserID = @UserID";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -86,10 +136,18 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                         command.Parameters.AddWithValue("@Lastname", user.Lastname);
                         command.Parameters.AddWithValue("@Age", user.Age);
                         command.Parameters.AddWithValue("@Email", user.Email);
-                        command.Parameters.AddWithValue("@Username", user.Username);
-                        command.Parameters.AddWithValue("@Password", user.Password);
                         command.Parameters.AddWithValue("@Phone", user.Phone);
                         command.Parameters.AddWithValue("@DepartmentID", user.DepartmentID);
+
+                        if (!skipUsername)
+                        {
+                            command.Parameters.AddWithValue("@Username", user.Username);
+                        }
+                        if (!skipPassword)
+                        {
+                            command.Parameters.AddWithValue("@Password", user.Password);
+                        }
+
                         int rowsAffected = command.ExecuteNonQuery();
                         return rowsAffected > 0;
                     }
@@ -97,7 +155,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                 catch (Exception ex)
                 {
                     // Handle exceptions (log them, rethrow them, etc.)
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                     return false;
                 }
             }
@@ -851,6 +909,177 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                 }
             }
         }
+        //        public static DataTable LoadUserAttendanceReport(int userId, string reportType, DateTime? startDate = null, DateTime? endDate = null)
+        //        {
+        //            DataTable dataTable = new DataTable();
+
+        //            // Determine the date range based on the report type
+        //            DateTime reportStartDate;
+        //            DateTime reportEndDate;
+
+        //            switch (reportType.ToLower())
+        //            {
+        //                case "daily":
+        //                    reportStartDate = DateTime.Today;
+        //                    reportEndDate = DateTime.Today;
+        //                    break;
+        //                case "weekly":
+        //                    reportStartDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 7)); // Last week
+        //                    reportEndDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 1));   // End of last week
+        //                    break;
+        //                case "monthly":
+        //                    reportStartDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month - 1, 1); // First day of last month
+        //                    reportEndDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1); // Last day of last month
+        //                    break;
+        //                case "range":
+        //                    if (startDate.HasValue && endDate.HasValue)
+        //                    {
+        //                        reportStartDate = startDate.Value;
+        //                        reportEndDate = endDate.Value;
+        //                    }
+        //                    else
+        //                    {
+        //                        throw new ArgumentException("Start date and end date must be provided for a date range report.");
+        //                    }
+        //                    break;
+        //                default:
+        //                    throw new ArgumentException("Invalid report type specified.");
+        //            }
+
+        //            // SQL Query to fetch user attendance data within the specified date range, excluding weekends and holidays
+        //            string query = @"SELECT 
+        //    u.Firstname, 
+        //    u.Lastname, 
+        //    a.Date,
+        //    a.MorningCheckIn,
+        //    a.EveningCheckOut,
+        //    DATEDIFF(HOUR, a.MorningCheckIn, a.MorningCheckOut) + DATEDIFF(HOUR, a.EveningCheckIn, a.EveningCheckOut) AS TotalHoursWorked
+        //FROM 
+        //    Users u
+        //INNER JOIN 
+        //    Attendances a ON u.UserID = a.UserID
+        //LEFT JOIN 
+        //    Holidays h ON a.Date = h.HolidayDate
+        //WHERE 
+        //    u.UserID = @UserID AND
+        //    a.Date BETWEEN @StartDate AND @EndDate AND
+        //    DATENAME(WEEKDAY, a.Date) NOT IN ('Saturday', 'Sunday') AND
+        //    h.HolidayDate IS NULL
+        //ORDER BY 
+        //    a.Date;
+        //";
+
+        //            using (SqlConnection connection = new SqlConnection(_connectionString))
+        //            {
+        //                try
+        //                {
+        //                    connection.Open();
+        //                    using (SqlCommand command = new SqlCommand(query, connection))
+        //                    {
+        //                        command.Parameters.AddWithValue("@UserID", userId);
+        //                        command.Parameters.AddWithValue("@StartDate", reportStartDate);
+        //                        command.Parameters.AddWithValue("@EndDate", reportEndDate);
+
+        //                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+        //                        adapter.Fill(dataTable);
+        //                    }
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    // Log or handle the exception as appropriate
+        //                    MessageBox.Show("An error occurred: " + ex.Message);
+        //                }
+        //            }
+
+        //            return dataTable;
+        //        }
+
+        //    public static DataTable LoadUserAttendanceReport(int userId, string reportType, DateTime? startDate = null, DateTime? endDate = null)
+        //    {
+        //        DataTable dataTable = new DataTable();
+
+        //        // Determine the date range based on the report type
+        //        DateTime reportStartDate;
+        //        DateTime reportEndDate;
+
+        //        switch (reportType.ToLower())
+        //        {
+        //            case "daily":
+        //                reportStartDate = DateTime.Today;
+        //                reportEndDate = DateTime.Today;
+        //                break;
+        //            case "weekly":
+        //                reportStartDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 6)); // Last Monday
+        //                reportEndDate = reportStartDate.AddDays(6); // End of that week (Sunday)
+        //                break;
+        //            case "monthly":
+        //                reportStartDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1); // First day of last month
+        //                reportEndDate = reportStartDate.AddMonths(1).AddDays(-1); // Last day of last month
+        //                break;
+        //            case "range":
+        //                if (startDate.HasValue && endDate.HasValue)
+        //                {
+        //                    reportStartDate = startDate.Value;
+        //                    reportEndDate = endDate.Value;
+        //                }
+        //                else
+        //                {
+        //                    throw new ArgumentException("Start date and end date must be provided for a date range report.");
+        //                }
+        //                break;
+        //            default:
+        //                throw new ArgumentException("Invalid report type specified.");
+        //        }
+
+        //        // SQL Query to fetch user attendance data within the specified date range, excluding weekends and holidays
+        //        string query = @"SELECT 
+        //    u.Firstname, 
+        //    u.Lastname, 
+        //    a.Date,
+        //    a.MorningCheckIn,
+        //    a.EveningCheckOut,
+        //    DATEDIFF(MINUTE, a.MorningCheckIn, a.MorningCheckOut) / 60.0 + 
+        //    DATEDIFF(MINUTE, a.EveningCheckIn, a.EveningCheckOut) / 60.0 AS TotalHoursWorked
+        //FROM 
+        //    Users u
+        //INNER JOIN 
+        //    Attendances a ON u.UserID = a.UserID
+        //LEFT JOIN 
+        //    Holidays h ON a.Date = h.HolidayDate
+        //WHERE 
+        //    u.UserID = @UserID AND
+        //    a.Date BETWEEN @StartDate AND @EndDate AND
+        //    DATEPART(WEEKDAY, a.Date) NOT IN (1, 7) AND
+        //    h.HolidayDate IS NULL
+        //ORDER BY 
+        //    a.Date;
+        //";
+
+        //        using (SqlConnection connection = new SqlConnection(_connectionString))
+        //        {
+        //            try
+        //            {
+        //                connection.Open();
+        //                using (SqlCommand command = new SqlCommand(query, connection))
+        //                {
+        //                    command.Parameters.AddWithValue("@UserID", userId);
+        //                    command.Parameters.AddWithValue("@StartDate", reportStartDate);
+        //                    command.Parameters.AddWithValue("@EndDate", reportEndDate);
+
+        //                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+        //                    adapter.Fill(dataTable);
+        //                }
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                // Log or handle the exception as appropriate
+        //                MessageBox.Show("An error occurred: " + ex.Message);
+        //            }
+        //        }
+
+        //        return dataTable;
+        //    }
+
         public static DataTable LoadUserAttendanceReport(int userId, string reportType, DateTime? startDate = null, DateTime? endDate = null)
         {
             DataTable dataTable = new DataTable();
@@ -866,12 +1095,12 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                     reportEndDate = DateTime.Today;
                     break;
                 case "weekly":
-                    reportStartDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 7)); // Last week
-                    reportEndDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 1));   // End of last week
+                    reportStartDate = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + 6)); // Last Monday
+                    reportEndDate = reportStartDate.AddDays(6); // End of that week (Sunday)
                     break;
                 case "monthly":
-                    reportStartDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month - 1, 1); // First day of last month
-                    reportEndDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1); // Last day of last month
+                    reportStartDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1); // First day of last month
+                    reportEndDate = reportStartDate.AddMonths(1).AddDays(-1); // Last day of last month
                     break;
                 case "range":
                     if (startDate.HasValue && endDate.HasValue)
@@ -888,28 +1117,41 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Models
                     throw new ArgumentException("Invalid report type specified.");
             }
 
-            // SQL Query to fetch user attendance data within the specified date range, excluding weekends and holidays
-            string query = @"SELECT 
-    u.Firstname, 
-    u.Lastname, 
-    a.Date,
-    a.MorningCheckIn,
-    a.EveningCheckOut,
-    DATEDIFF(HOUR, a.MorningCheckIn, a.MorningCheckOut) + DATEDIFF(HOUR, a.EveningCheckIn, a.EveningCheckOut) AS TotalHoursWorked
-FROM 
-    Users u
-INNER JOIN 
-    Attendances a ON u.UserID = a.UserID
-LEFT JOIN 
-    Holidays h ON a.Date = h.HolidayDate
-WHERE 
-    u.UserID = @UserID AND
-    a.Date BETWEEN @StartDate AND @EndDate AND
-    DATENAME(WEEKDAY, a.Date) NOT IN ('Saturday', 'Sunday') AND
-    h.HolidayDate IS NULL
-ORDER BY 
-    a.Date;
-";
+            string query = @"WITH DateRange AS (
+        SELECT CAST(@StartDate AS DATE) AS [Date]
+        UNION ALL
+        SELECT DATEADD(DAY, 1, [Date])
+        FROM DateRange
+        WHERE DATEADD(DAY, 1, [Date]) <= @EndDate
+    )
+    SELECT 
+        dr.[Date],
+        u.Firstname, 
+        u.Lastname, 
+        a.MorningCheckIn,
+        a.MorningCheckOut,
+        a.EveningCheckIn,
+        a.EveningCheckOut,
+        CASE 
+            WHEN dr.[Date] < CAST(GETDATE() AS DATE) AND a.UserID IS NULL THEN 'Absent'
+            WHEN dr.[Date] >= CAST(GETDATE() AS DATE) AND a.UserID IS NULL THEN 'Not yet'
+            ELSE 'Present'
+        END AS AttendanceStatus,
+        DATEDIFF(MINUTE, a.MorningCheckIn, a.MorningCheckOut) / 60.0 + 
+        DATEDIFF(MINUTE, a.EveningCheckIn, a.EveningCheckOut) / 60.0 AS TotalHoursWorked
+    FROM 
+        DateRange dr
+    LEFT JOIN 
+        Attendances a ON dr.[Date] = a.Date AND a.UserID = @UserID
+    LEFT JOIN 
+        Users u ON u.UserID = @UserID
+    LEFT JOIN 
+        Holidays h ON dr.[Date] = h.HolidayDate
+    WHERE 
+        DATEPART(WEEKDAY, dr.[Date]) NOT IN (1, 7) -- Exclude weekends
+        AND h.HolidayDate IS NULL -- Exclude holidays
+    ORDER BY 
+        dr.[Date];";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -937,6 +1179,29 @@ ORDER BY
         }
 
 
+
+        public static void AutoCheckoutMissingEntries()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("AutoCheckoutMissingEntries", connection))
+                    {
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        int rowsAffected = command.ExecuteNonQuery();
+                        Console.WriteLine($"{rowsAffected} records updated with auto-checkout.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle the exception as needed, you could log this to a file or display a message box in a desktop application.
+                    MessageBox.Show("An error occurred while performing auto-checkout: " + ex.Message);
+                }
+            }
+        }
 
 
 

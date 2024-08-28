@@ -57,7 +57,7 @@
             this.btnSignIn.Location = new System.Drawing.Point(345, 362);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(118, 34);
-            this.btnSignIn.TabIndex = 16;
+            this.btnSignIn.TabIndex = 21;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
@@ -138,7 +138,7 @@
             this.tbEmail.Location = new System.Drawing.Point(372, 224);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(171, 22);
-            this.tbEmail.TabIndex = 18;
+            this.tbEmail.TabIndex = 16;
             this.tbEmail.Text = "Email";
             this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
             this.tbEmail.Leave += new System.EventHandler(this.tbEmail_Leave);
@@ -183,7 +183,7 @@
             this.btnSend.Location = new System.Drawing.Point(457, 252);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 21;
+            this.btnSend.TabIndex = 18;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -215,6 +215,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignInForm";
             this.Text = "Sign In";
+            this.Load += new System.EventHandler(this.SignInForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

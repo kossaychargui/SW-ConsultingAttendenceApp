@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbDailyRange = new System.Windows.Forms.RadioButton();
+            this.rbDateRange = new System.Windows.Forms.RadioButton();
             this.rbMonthly = new System.Windows.Forms.RadioButton();
             this.rbDaily = new System.Windows.Forms.RadioButton();
             this.rbWeakly = new System.Windows.Forms.RadioButton();
@@ -67,7 +67,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbDailyRange);
+            this.groupBox1.Controls.Add(this.rbDateRange);
             this.groupBox1.Controls.Add(this.rbMonthly);
             this.groupBox1.Controls.Add(this.rbDaily);
             this.groupBox1.Controls.Add(this.rbWeakly);
@@ -79,17 +79,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Period";
             // 
-            // rbDailyRange
+            // rbDateRange
             // 
-            this.rbDailyRange.AutoSize = true;
-            this.rbDailyRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDailyRange.Location = new System.Drawing.Point(109, 65);
-            this.rbDailyRange.Name = "rbDailyRange";
-            this.rbDailyRange.Size = new System.Drawing.Size(101, 20);
-            this.rbDailyRange.TabIndex = 6;
-            this.rbDailyRange.Text = "Date Range";
-            this.rbDailyRange.UseVisualStyleBackColor = true;
-            this.rbDailyRange.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
+            this.rbDateRange.AutoSize = true;
+            this.rbDateRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDateRange.Location = new System.Drawing.Point(109, 65);
+            this.rbDateRange.Name = "rbDateRange";
+            this.rbDateRange.Size = new System.Drawing.Size(101, 20);
+            this.rbDateRange.TabIndex = 6;
+            this.rbDateRange.Text = "Date Range";
+            this.rbDateRange.UseVisualStyleBackColor = true;
+            this.rbDateRange.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // rbMonthly
             // 
@@ -135,6 +135,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -142,6 +143,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 4;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cbFullNames
             // 
@@ -196,7 +198,7 @@
         private System.Windows.Forms.RadioButton rbMonthly;
         private System.Windows.Forms.RadioButton rbDaily;
         private System.Windows.Forms.RadioButton rbWeakly;
-        private System.Windows.Forms.RadioButton rbDailyRange;
+        private System.Windows.Forms.RadioButton rbDateRange;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox cbFullNames;

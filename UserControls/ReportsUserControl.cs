@@ -30,19 +30,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
             dateTimePicker2.Visible = false;
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            dateTimePicker1.Visible = true;
-            dateTimePicker2.Visible = true;
-        }
-
-       
-
-        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
-        {
-            dateTimePicker1.Visible = false;
-            dateTimePicker2.Visible = false;
-        }
+   
 
         private void LoadFullnames()
         {
@@ -65,7 +53,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
             if (string.IsNullOrEmpty(selectedFullName))
             {
-                MessageBox.Show("Please select a valid user.");
+                MessageBox.Show("Please select an Employee from the employees list!");
                 return;
             }
 
@@ -135,13 +123,14 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
 
         private void btnExportToPdf_Click(object sender, EventArgs e)
         {
+            string selectedFullName = cbFullNames.SelectedItem?.ToString();
             DataTable attendanceData = (DataTable)dataGridView1.DataSource;
 
             if (attendanceData != null && attendanceData.Rows.Count > 0)
             {
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF file (*.pdf)|*.pdf";
-                saveFileDialog.FileName = "AttendanceReport.pdf";
+                saveFileDialog.FileName = $"{selectedFullName} AttendanceReport.pdf";
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -156,6 +145,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         }
         private void ExportToPdf(DataTable dt, string filePath)
         {
+            string selectedFullName = cbFullNames.SelectedItem?.ToString();
             // Initialize the PDF document
             Document pdfDoc = new Document(PageSize.A4, 10, 10, 10, 10);
             try
@@ -164,7 +154,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
                 pdfDoc.Open();
 
                 // Add a title to the PDF
-                Paragraph title = new Paragraph("Attendance Report");
+                Paragraph title = new Paragraph($"{selectedFullName} Attendance Report");
                 title.Alignment = Element.ALIGN_CENTER;
                 pdfDoc.Add(title);
 
@@ -205,6 +195,21 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         }
 
         private void rbDaily_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadReport();
+            if(rbDateRange.Checked)
+            {
+                dateTimePicker1.Visible = true;
+                dateTimePicker2.Visible = true;
+            }
+            else
+            {
+                dateTimePicker1.Visible = false;
+                dateTimePicker2.Visible = false;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             LoadReport();
         }

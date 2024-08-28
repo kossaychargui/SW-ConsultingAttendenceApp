@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -16,13 +17,23 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
 {
     public partial class SignInForm : Form
     {
+        private Region GetRoundedImagePictureBox(PictureBox pictureBox)
+        {
+            GraphicsPath graphicspath = new GraphicsPath();
+            graphicspath.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+            Region rgn = new Region(graphicspath);
+            return rgn;
+        }
         public SignInForm()
         {
             InitializeComponent();
         }
 
         private int vcode = 1000;
-        private ErrorProvider errorProvider = new ErrorProvider();
+        private ErrorProvider errorProviderUsername = new ErrorProvider();
+        private ErrorProvider errorProviderPassword = new ErrorProvider();
+        private ErrorProvider errorProviderEmail = new ErrorProvider();
+        private ErrorProvider errorProviderVerificationCode = new ErrorProvider();
         private void tbUsername_Enter(object sender, EventArgs e)
         {
             if (tbUsername.Text == "Username")
@@ -41,9 +52,12 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
             }
             if (tbUsername.Text == "Username")
             {
-                errorProvider.SetError(tbUsername, "Username Required");
+                errorProviderUsername.SetError(tbUsername, "Username Required");
                 return;
             }
+            else
+                errorProviderUsername.Clear();
+
 
         }
 
@@ -69,8 +83,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
             }
             if (tbPassword.Text == "Password")
             {
-                errorProvider.SetError(tbPassword, "Password Required");
+                errorProviderPassword.SetError(tbPassword, "Password Required");
             }
+            else
+                errorProviderPassword.Clear();
         }
 
         private void tbEmail_Enter(object sender, EventArgs e)
@@ -92,8 +108,10 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
             }
             if(tbEmail.Text == "Email")
             {
-                errorProvider.SetError(tbEmail, "Email Required!");
+                errorProviderEmail.SetError(tbEmail, "Email Required!");
             }
+            else
+                errorProviderEmail.Clear();
         }
 
         private void tbVerificationCode_Enter(object sender, EventArgs e)
@@ -112,10 +130,12 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
                 tbVerificationCode.Text = "Verification Code";
                 tbVerificationCode.ForeColor = Color.Silver;
             }
-            if(tbVerificationCode.Text == "Verification Code")
+            if (tbVerificationCode.Text == "Verification Code")
             {
-                errorProvider.SetError(tbVerificationCode, "Verification Code Required!");
+                errorProviderVerificationCode.SetError(tbVerificationCode, "Verification Code Required!");
             }
+            else
+                errorProviderVerificationCode.Clear();
         }
 
        
@@ -193,9 +213,11 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.Forms
             return (tbUsername.Text == "Username" || tbPassword.Text == "Password" || tbEmail.Text == "Email");
         }
 
-   
-           
-        
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+            pbLogo.Region = GetRoundedImagePictureBox(pbLogo);
+  
+        }
     }
 
     

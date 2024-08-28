@@ -68,7 +68,7 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_.UserControls
             user.Phone = tbPhoneNumber.Text;
             user.Age = Convert.ToInt32(tbAge.Text);
             user.DepartmentID = Convert.ToInt32(cbDepartment.SelectedIndex);
-            if(clsUsersData.UpdateUser(user))
+            if(clsUsersData.UpdateUser(user, true, true))
             {
                 MessageBox.Show("User Updated Successfully", "Successful Operation!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

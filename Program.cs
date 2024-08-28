@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SW_ConsultingAttendenceApp_FirstTrial_.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace SW_ConsultingAttendenceApp_FirstTrial_
         [STAThread]
         static void Main()
         {
+            clsUsersData.AutoCheckoutMissingEntries();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginForm loginForm = new LoginForm();
